@@ -1,0 +1,27 @@
+/** TOOLBAR
+credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
+*/
+.toolbar {
+    background-color: #4b2c0f;
+    overflow: hidden;
+}
+
+.toolbar a {
+    float: left;
+    color: #f8f5ed;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: serif
+}
+
+.toolbar a:hover {
+    background-color: rgb(90, 70, 65);
+    color: white;
+}
+
+.toolbar a.active {
+    color: white;
+    font-weight: bold;
+}
