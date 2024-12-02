@@ -10,17 +10,15 @@ credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
     overflow: hidden;
 }
 
-/*.toolbar.icon {
-    float: left;
+.toolbar .icon {
     height: 45.9px;
     width: 45.5px;
     background-color: #f8f5ed;
     border-radius: 30px;
     padding: 5px;
-}*/
+}
 
 .toolbar a {
-    float: inline-end;
     color: #f8f5ed;
     text-align: right;
     padding: 14px 16px;
@@ -42,6 +40,10 @@ credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
 .header .logo{
     height: 345.3px;
     width: 365px;
+}
+
+.header .logo::backdrop{
+    border-radius: 40px;
     background-color: #f8f5ed;
     
 }
