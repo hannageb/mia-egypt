@@ -20,7 +20,7 @@ credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
     padding: 14px 16px;
     text-decoration: none;
     font-size: 29.5px;
-    font-family: serif
+    font-family: serif;
 }
 
 .toolbar a:hover {
@@ -32,14 +32,16 @@ credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
     color: white;
     font-weight: bold;
 }
-
-.header .logo{
-    height: 345.3px;
-    width: 365px;
+.who-are-we{
+    font-size: 23.2px;
+    text-align: right;
+    padding-left: 75%;
 }
 
-.header .logo::backdrop{
-    border-radius: 40px;
-    background-color: #f8f5ed;
-    
+.background-pic img{
+    float: left;
+    width: 683px;
+    height: 691px;
+    padding: 1px;
+    filter: blur(5px)
 }
