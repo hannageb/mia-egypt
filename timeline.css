@@ -17,7 +17,7 @@ credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
 .toolbar a {
     color: #f8f5ed;
     text-align: right;
-    padding: 14px 16px;
+    padding: 14px 14px;
     text-decoration: none;
     font-size: 29.5px;
     font-family: serif
@@ -31,11 +31,4 @@ credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
 .toolbar a.active {
     color: white;
     font-weight: bold;
-}
-
-.header .logo{
-    height: 345.3px;
-    width: 365px;
-    background-color: #f8f5ed;
-    
 }
