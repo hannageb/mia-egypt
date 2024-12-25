@@ -6,6 +6,14 @@ credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
     overflow: hidden;
 }
 
+.toolbar .icon {
+    height: 45.9px;
+    width: 45.5px;
+    background-color: #f8f5ed;
+    border-radius: 30px;
+    padding: 5px;
+}
+
 .toolbar .icon{
     height: 57.9px;
     width: 55.5px; 

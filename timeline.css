@@ -6,6 +6,7 @@ credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
     overflow: hidden;
 }
 
+<<<<<<< HEAD
 .toolbar .icon{
     height: 57.9px;
     width: 55.5px; 
@@ -18,6 +19,20 @@ credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
     color: #f8f5ed;
     text-align: right;
     padding: 14px 14px;
+=======
+.toolbar .icon {
+    height: 45.9px;
+    width: 45.5px;
+    background-color: #f8f5ed;
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.toolbar a {
+    color: #f8f5ed;
+    text-align: right;
+    padding: 14px 16px;
+>>>>>>> 51a1f050a233c98ac7df0e2f949cc23e618818cb
     text-decoration: none;
     font-size: 29.5px;
     font-family: serif
@@ -31,4 +46,8 @@ credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
 .toolbar a.active {
     color: white;
     font-weight: bold;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 51a1f050a233c98ac7df0e2f949cc23e618818cb
