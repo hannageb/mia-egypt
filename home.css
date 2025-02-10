@@ -11,7 +11,6 @@ credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
     width: 45.5px;
     background-color: #f8f5ed;
     border-radius: 30px;
-    padding: 5px;
 }
 
 .toolbar a {
@@ -44,4 +43,7 @@ credits: W3Schools https://www.w3schools.com/howto/howto_js_topnav.asp
     height: 691px;
     padding: 1px;
     filter: blur(5px)
+}
+body{
+    background-color: teal;
 }
