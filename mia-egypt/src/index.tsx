@@ -3,13 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import Collections from './pages/collections';
+import Map from './pages/map';
+import History from './pages/history';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<App/>}/>
+        <Route path="/Collections" element={<Collections/>}/>
+        <Route path="/Map" element={<Map/>}/>
+        <Route path="/History" element={<History/>}/>
+      </Routes>
+    </HashRouter>
   </React.StrictMode>
 );
 

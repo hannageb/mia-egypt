@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
+  const navigate = useNavigate();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="nav-bar" style={{justifyContent: 'center'}}>
+        <div className="home-button">
+        <button
+          onClick={() => {
+            navigate('/');
+          } }>Home</button>
+        </div>
+        <div className='navigation'>
+          <button
+            onClick={() => {
+              navigate('/Collections');
+            } }>Collections</button>
+          <button
+            onClick={() => {
+              navigate('/Map');
+            } }>Map</button>
+          <button
+            onClick={() => {
+              navigate('/History');
+            } }>History</button>
+        </div>
+      </div>
   );
 }
 
