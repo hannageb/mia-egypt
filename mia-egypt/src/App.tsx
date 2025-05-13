@@ -25,6 +25,10 @@ function App() {
             onClick={() => {
               navigate('/History');
             } }>History</button>
+          <button
+          onClick={() => {
+            navigate('/Exhibition');
+          } }>Exhibitions</button>
         </div>
       </div>
   );
