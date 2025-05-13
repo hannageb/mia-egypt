@@ -5,14 +5,12 @@ import { useNavigate } from 'react-router-dom';
 function App() {
   const navigate = useNavigate();
   return (
-    <div className="nav-bar" style={{justifyContent: 'center'}}>
-        <div className="home-button">
+    <div className="nav-bar">
         <button
+          className="home-button"
           onClick={() => {
             navigate('/');
           } }>Home</button>
-        </div>
-        <div className='navigation'>
           <button
             onClick={() => {
               navigate('/Collections');
@@ -29,7 +27,7 @@ function App() {
           onClick={() => {
             navigate('/Exhibition');
           } }>Exhibitions</button>
-        </div>
+          <button>عربي</button>
       </div>
   );
 }
