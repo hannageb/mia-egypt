@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import './collections.css'
 
 function Collections(){
@@ -8,6 +7,3 @@ function Collections(){
 }
 
 export default Collections
-=======
-import './collections.css' 
->>>>>>> main

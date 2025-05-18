@@ -1,23 +1,12 @@
-<<<<<<< HEAD
-import './history.css'
-
-function History(){
-
-    return (
-        <header>History</header>
-    );
-}
-
-export default History
-=======
 import './history.css' 
+
 function History() {
     return(
         <>
         <title>MIA Egypt: History</title>
+        <header>History</header>
         </>
     );
 }
 
 export default History;
->>>>>>> main

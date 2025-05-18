@@ -1,26 +1,13 @@
 import React from 'react';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
+  const navigate = useNavigate();
   return (
-    <><title>MIA Egypt</title>
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-    <><div className="nav-bar">
+    <>
+    <title>MIA Egypt</title>
+    <div className="nav-bar">
       <button
         className="home-button"
         onClick={() => {
@@ -44,7 +31,6 @@ function App() {
         } }>Exhibitions</button>
       <button>عربي</button>
     </div>
-    <div className="background">
     </>
   );
 }

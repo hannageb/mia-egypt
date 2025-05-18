@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import './map.css'
 
 function Map(){
@@ -9,6 +8,3 @@ function Map(){
 }
 
 export default Map
-=======
-import './map.css' 
->>>>>>> main
