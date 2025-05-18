@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './history.css'
 
 function History(){
@@ -8,3 +9,15 @@ function History(){
 }
 
 export default History
+=======
+import './history.css' 
+function History() {
+    return(
+        <>
+        <title>MIA Egypt: History</title>
+        </>
+    );
+}
+
+export default History;
+>>>>>>> main
