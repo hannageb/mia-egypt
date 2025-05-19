@@ -1,11 +1,11 @@
 import Footer from '../nav-bar/footer';
 import Navigation from '../nav-bar/nav-bar'
-import './history.css' 
+import './contact.css' 
 
-function History() {
+function Contact() {
     return(
         <><Navigation /><Footer /></>
     );
 }
 
-export default History;
+export default Contact;

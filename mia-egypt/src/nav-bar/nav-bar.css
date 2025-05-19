@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-image: url('/Users/hannageb/passion-projects/mia-egypt/public/home-bkgd.jpg');
+    background-color: #f8f5ed;
     opacity: 80%;
 }
 
@@ -21,7 +21,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 6px 10%;
-    background-color: rgb(80, 56, 46);
+    background-color: rgb(53, 33, 25);
 }
 
 .logo{
@@ -62,53 +62,10 @@ button:hover{
 select {
     margin-left: 20px;
     padding: 9px 25px;
-    background-color: rgb(117, 74, 29);
+    background-color: rgb(101, 66, 28);
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     color: whitesmoke;
-}
-
-footer{
-    position:absolute;
-    width: 100%;
-    left: 0%;
-    bottom: 0%;
-    padding: 2px 2%;
-    background-color: rgb(80, 56, 46);
-    color: whitesmoke;
-}
-
-.socials{
-    list-style: none;
-}
-
-.socials li{
-    display: block;
-    padding: 0px 20px
-}
-
-.socials li, a{
-    color: whitesmoke;
-    transition: all 0.3s ease 0s;
-}
-
-.socials li, a:hover{
-    color: #9d9d9d
-}
-
-.col {
-  flex: 50%;
-  padding: 10px;
-}
-
-.row {
-  display: flex;
-}
-
-.col, .row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }

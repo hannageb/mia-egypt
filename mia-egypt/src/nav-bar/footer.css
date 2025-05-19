@@ -1,0 +1,43 @@
+
+footer{
+    position:absolute;
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
+    padding: 2px 2%;
+    background-color: rgb(80, 56, 46);
+    color: whitesmoke;
+}
+
+.socials{
+    list-style: none;
+}
+
+.socials li{
+    display: block;
+    padding: 0px 20px
+}
+
+.socials li, a{
+    color: whitesmoke;
+    transition: all 0.3s ease 0s;
+}
+
+.socials li, a:hover{
+    color: #9d9d9d
+}
+
+.col {
+  flex: 50%;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.col, .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

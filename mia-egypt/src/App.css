@@ -1,0 +1,12 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f5ed;
+    opacity: 80%;
+}
+
+img {
+    align-items: center;
+    justify-content: center;
+}
