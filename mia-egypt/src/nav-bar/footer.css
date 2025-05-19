@@ -1,4 +1,3 @@
-
 footer{
     position:absolute;
     width: 100%;
@@ -9,6 +8,15 @@ footer{
     color: whitesmoke;
 }
 
+.insta{
+    width: 20px;
+    height: 20px;
+}
+
+.facebook{
+    width: 25px;
+    height: 25px;
+}
 .socials{
     list-style: none;
 }

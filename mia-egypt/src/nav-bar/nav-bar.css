@@ -4,8 +4,19 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    width: 100%;
     background-color: #f8f5ed;
     opacity: 80%;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    background-color: #edf0f1;
+    border-width: 45px;
+    border-top: 45px;
+    border-bottom: 45px;
+    border-radius: 60%;
 }
 
 li, a, button, select {
