@@ -12,23 +12,23 @@ function Navigation() {
   
   return (
     <header>
-      <img className="logo" src="./assets/icon.png" alt="logo" />
+      <a href="/"><img className="logo" src="./assets/icon.png" alt="logo"/></a>
       <nav>
         <ul className="nav_links">
           <li><a href="collections.tsx">Collections</a></li>
           <li><a href="map.tsx">Map</a></li>
           <li><a href="history.tsx">History</a></li>
-        </ul>
+          <li><a href="contact.tsx">Contact</a></li>
+      </ul>
       </nav>
-      <a className="contact" href="contact.tsx"><button>Contact</button></a>
       <Form.Group>
-        <Form.Select value={language} onChange={changeLanguage}>
-          <option value="placeholder" disabled> 🌐 </option>
-          <option value="english">English</option>
-          <option value="arabic">عربي</option>
-          <option value="french">French</option>
-        </Form.Select>
-      </Form.Group>
+          <Form.Select value={language} onChange={changeLanguage}>
+            <option value="placeholder" disabled> 🌐 </option>
+            <option value="english">English</option>
+            <option value="arabic">عربي</option>
+            <option value="french">French</option>
+          </Form.Select>
+        </Form.Group>
     </header>
   );
 }
