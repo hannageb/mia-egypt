@@ -1,10 +1,11 @@
-import './map.css'
+import React from 'react';
+import './map.css';
+import Navigation from '../nav-bar';
 
-function Map(){
-
-    return (
-        <header>Map</header>
-    );
+function Map() {
+  return (
+    <Navigation/>
+  );
 }
 
-export default Map
+export default Map;
