@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mia-egypt/static/css/main.c21d07c5.css",
+    "main.js": "/mia-egypt/static/js/main.84059a94.js",
+    "static/js/453.b7227df1.chunk.js": "/mia-egypt/static/js/453.b7227df1.chunk.js",
+    "index.html": "/mia-egypt/index.html",
+    "main.c21d07c5.css.map": "/mia-egypt/static/css/main.c21d07c5.css.map",
+    "main.84059a94.js.map": "/mia-egypt/static/js/main.84059a94.js.map",
+    "453.b7227df1.chunk.js.map": "/mia-egypt/static/js/453.b7227df1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c21d07c5.css",
+    "static/js/main.84059a94.js"
+  ]
+}
