@@ -1,6 +1,5 @@
-import React from 'react';
 import './map.css';
-import Navigation from '../nav-bar';
+import Navigation from '../nav-bar/nav-bar';
 
 function Map() {
   return (

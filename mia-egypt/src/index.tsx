@@ -7,7 +7,6 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import Collections from './pages/collections';
 import Map from './pages/map';
 import History from './pages/history';
-import Exhibitions from './pages/exhibitions';
 
 
 const root = ReactDOM.createRoot(
@@ -21,7 +20,6 @@ root.render(
         <Route path="/Collections" element={<Collections/>}/>
         <Route path="/Map" element={<Map/>}/>
         <Route path="/History" element={<History/>}/>
-        <Route path="/Exhibitions" element={<Exhibitions/>}/>
       </Routes>
     </HashRouter>
   </React.StrictMode>

@@ -1,39 +1,11 @@
-import { useNavigate } from 'react-router-dom';
 import './collections.css'
+import Navigation from '../nav-bar/nav-bar'
+
 
 function Collections(){
-    const navigate = useNavigate();
     return(
-        <>
-        <title>MIA Egypt</title>
-        <div className="nav-bar">
-        <button
-            className="home-button"
-            onClick={() => {
-            navigate('/');
-            } }></button>
-        <button
-            onClick={() => {
-            navigate('/Collections');
-            } }>Collections</button>
-        <button
-            className="map-button"
-            onClick={() => {
-            navigate('/Map');
-            }}
-            >Map</button>
-        <button
-            onClick={() => {
-            navigate('/History');
-            } }>History</button>
-        <button
-            onClick={() => {
-            navigate('/Exhibitions');
-            } }>Exhibitions</button>
-        <button>عربي</button>
-        </div>
-        </>
-  );
+        <Navigation/>
+    );
 }
 
 export default Collections
