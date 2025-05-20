@@ -2,14 +2,13 @@ import React from 'react';
 import './App.css';
 import Navigation from './nav-bar/nav-bar';
 import Footer from './nav-bar/footer';
-import fullLogo from './assets/full_logo.png';
 
 
 function App() {
   return (
     <div className="container">
       <Navigation />
-      <img src={fullLogo} alt="full logo with text" />
+      <img src="./full_logo.png" alt="icon w/ text"></img>
       <Footer/>
     </div>
   );

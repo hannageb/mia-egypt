@@ -1,9 +1,5 @@
 import React from 'react';
 import './footer.css';
-import facebook from '/Users/hannageb/passion-projects/mia-egypt/src/assets/facebook-logo.png';
-import insta from '/Users/hannageb/passion-projects/mia-egypt/src/assets/instagram-logo.png';
-
-
 
 function Footer() {
   return (
@@ -14,8 +10,8 @@ function Footer() {
           </div>
           <div className='col'>
             <ul className="socials">
-              <li><a href="https://www.instagram.com/miainegypt/"><img className="insta" src={insta} alt="instagram"/></a></li>
-              <li><a href="https://www.facebook.com/miaegypt/"><img className="facebook" src={facebook} alt="facebook"/></a></li>
+              <li><a href="https://www.instagram.com/miainegypt/"><img className="insta" src="./instagram-logo.png" alt="instagram"></img></a></li>
+              <li><a href="https://www.facebook.com/miaegypt/"><img className="facebook" src="./facebook-logo.png" alt="facebook"></img></a></li>
             </ul>
           </div>
           <div className='col'>

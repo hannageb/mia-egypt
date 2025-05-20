@@ -2,7 +2,6 @@ import React, { useState }  from 'react';
 import './nav-bar.css';
 import { Form } from 'react-bootstrap';
 import {Link} from "react-router-dom";
-import icon from '../assets/icon.png';
 
 
 /* reference for navigation bar: 
@@ -17,7 +16,7 @@ function Navigation() {
   
   return (
     <header>
-      <Link to="/"><img src={icon} alt="icon" className="icon"/></Link>
+      <Link to="/"><img src="./icon.png" alt="icon" className="icon"></img></Link>
       <nav>
         <ul className="nav_links">
           <li><Link to="/collections"> Collections </Link></li>

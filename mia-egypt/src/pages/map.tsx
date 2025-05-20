@@ -1,15 +1,13 @@
 import Navigation from '../nav-bar/nav-bar';
 import Footer from '../nav-bar/footer';
-import map from "../assets/map.jpg";
 
 function Map() {
-  console.log("map page!")
   return (
-    <>
+    <div className="container">
       <Navigation />
-      <img src={map} alt="map"/>
-      <Footer />
-    </>
+      <img src="./map.jpg" alt="map"></img>
+      <Footer/>
+    </div>
   );
 }
 

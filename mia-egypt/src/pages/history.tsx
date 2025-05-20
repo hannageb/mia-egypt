@@ -4,7 +4,10 @@ import './history.css'
 
 function History() {
     return(
-        <><Navigation /><Footer /></>
+        <div className="container">
+            <Navigation />
+            <Footer/>
+        </div>
     );
 }
 

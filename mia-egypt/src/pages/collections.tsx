@@ -5,9 +5,10 @@ import Footer from '../nav-bar/footer';
 
 function Collections(){
     return(
-        <><Navigation />
-        <h4>Our Collection</h4>
-        <Footer /></>
+        <div className="container">
+            <Navigation />
+            <Footer/>
+        </div>
     );
 }
 
