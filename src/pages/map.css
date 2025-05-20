@@ -1,0 +1,117 @@
+img{
+    z-index: auto;
+    padding: 0%;
+}
+
+.umayyad-abbasid{
+    object-fit: none;
+    position: absolute;
+    top: 570px;
+    left: 590px;
+    height: 75px;
+    width: 50px;
+    z-index: 2;
+    font-size: 5px;
+    background-color: rgba(104, 87, 74, 1);
+}
+
+.fatimid{
+    object-fit: none;
+    position: absolute;
+    top: 570px;
+    left: 648px;
+    height: 75px;
+    width: 275px;
+    z-index: 2;
+    background-color: rgba(133, 116, 104, 1);
+}
+
+.ayyubid{
+    object-fit: none;
+    position: absolute;
+    top: 650px;
+    left: 648px;
+    height: 50px;
+    width: 275px;
+    z-index: 2;
+    background-color: rgba(135, 124, 96, 1);
+}
+
+.mamluk{
+    object-fit: none;
+    position: absolute;
+    top: 710px;
+    left: 648px;
+    height: 75px;
+    width: 275px;
+    z-index: 2;
+    background-color: rgba(135, 124, 96, 1);
+}
+
+.mamluk-ottoman{
+    object-fit: none;
+    position: absolute;
+    top: 710px;
+    left: 590px;
+    height: 96px;
+    width: 50px;
+    z-index: 2;
+    font-size: 2px;
+    background-color: rgba(130, 122, 94, 1);
+}
+
+.ottoman{
+    object-fit: none;
+    position: absolute;
+    top: 650px;
+    left: 590px;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    background-color: rgba(130, 122, 94, 1);
+}
+
+.ottoman2{
+    object-fit: none;
+    position: absolute;
+    top: 650px;
+    left: 450px;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    background-color: rgba(130, 122, 94, 1);
+}
+
+.medicine{
+    object-fit: none;
+    position: absolute;
+    top: 710px;
+    left: 450px;
+    height: 64px;
+    width: 50px;
+    z-index: 2;
+    background-color: rgba(130, 88, 72, 1);
+}
+
+.nature{
+    object-fit: none;
+    position: absolute;
+    top: 710px;
+    left: 360px;
+    height: 75px;
+    width: 80px;
+    z-index: 2;
+    background-color: rgba(190, 108, 87, 1);
+}
+
+.calligraphy{
+    position: absolute;
+    top: 490px;
+    left: 100px;
+    height: 65px;
+    width: 170px;
+    transform: rotate(49deg) translateX(45px) translateY(10px);
+    z-index: 2;
+    background-color: rgba(245, 208, 165, 1);
+}
+

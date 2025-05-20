@@ -9,8 +9,7 @@ body {
 }
 
 .icon{
-    width: 30px;
-    height: 30px;
+    height: 40px;
     background-color: #edf0f1;
     border-width: 45px;
     border-top: 45px;
@@ -27,6 +26,7 @@ li, a, button, select {
 }
 
 header{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;

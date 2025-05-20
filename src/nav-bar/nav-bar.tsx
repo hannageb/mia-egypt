@@ -19,7 +19,7 @@ function Navigation() {
       <Link to="/"><img src="/mia-egypt/icon.png" alt="icon" className="icon"></img></Link>
       <nav>
         <ul className="nav_links">
-          <li><Link to="/collections"> Collections </Link></li>
+          <li><Link to="/collections">Collections </Link></li>
           <li><Link to="/map"> Map </Link></li>
           <li><Link to="/history"> History </Link></li>
           <li><Link to="/contact"> Contact Us</Link></li>
