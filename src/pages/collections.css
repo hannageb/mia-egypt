@@ -1,3 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px
+}
+
+.column{
+    padding-left: 20px;
+    flex: 1;
+}
+
+.column2{
+    flex: 3;
+}
+
+.item-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
 .itm-img{
     opacity: 100%;
     height: 300px;
@@ -25,20 +46,4 @@
     line-height: 0.5;
     width: 239px;
     padding: 2px 3px;
-}
-
-
-.col {
-  flex: 50%;
-}
-
-.row {
-  display: flex;
-  width: 100%;
-}
-
-.col, .row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
