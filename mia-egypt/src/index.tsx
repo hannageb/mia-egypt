@@ -14,17 +14,15 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<App/>}/>
-        <Route path="/collections" element={<Collections/>}/>
-        <Route path="/map" element={<Map />}/>
-        <Route path="/history" element={<History/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-      </Routes>
-    </HashRouter>
-  </React.StrictMode>
+  <HashRouter>
+    <Routes>
+      <Route path="/" element={<App/>}/>
+      <Route path="/collections" element={<Collections/>}/>
+      <Route path="/map" element={<Map />}/>
+      <Route path="/history" element={<History/>}/>
+      <Route path="/contact" element={<Contact/>}/>
+    </Routes>
+  </HashRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

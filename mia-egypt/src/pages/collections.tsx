@@ -7,6 +7,7 @@ function Collections(){
     return(
         <div className="container">
             <Navigation />
+            <h4>Our Collections</h4>
             <Footer/>
         </div>
     );
