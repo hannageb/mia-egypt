@@ -18,10 +18,10 @@ root.render(
     <HashRouter>
       <Routes>
         <Route path="/" element={<App/>}/>
-        <Route path="/Collections" element={<Collections/>}/>
-        <Route path="/Map" element={<Map/>}/>
-        <Route path="/History" element={<History/>}/>
-        <Route path="/Contact" element={<Contact/>}/>
+        <Route path="/collections" element={<Collections/>}/>
+        <Route path="/map" element={<Map />}/>
+        <Route path="/history" element={<History/>}/>
+        <Route path="/contact" element={<Contact/>}/>
       </Routes>
     </HashRouter>
   </React.StrictMode>

@@ -1,7 +1,9 @@
 import React, { useState }  from 'react';
 import './nav-bar.css';
 import { Form } from 'react-bootstrap';
-import icon from '/Users/hannageb/passion-projects/mia-egypt/src/assets/icon.png';
+import {Link} from "react-router-dom";
+import icon from '../assets/icon.png';
+
 
 /* reference for navigation bar: 
 * https://www.youtube.com/watch?v=PwWHL3RyQgk&ab_channel=Skillthrive
@@ -15,13 +17,13 @@ function Navigation() {
   
   return (
     <header>
-      <a href="/"><img src={icon} alt="icon" className="icon"/></a>
+      <Link to="/"><img src={icon} alt="icon" className="icon"/></Link>
       <nav>
         <ul className="nav_links">
-          <li><a href="collections.tsx">Collections</a></li>
-          <li><a href="map.tsx">Map</a></li>
-          <li><a href="history.tsx">History</a></li>
-          <li><a href="contact.tsx">Contact</a></li>
+          <li><Link to="/collections"> Collections </Link></li>
+          <li><Link to="/map"> Map </Link></li>
+          <li><Link to="/history"> History </Link></li>
+          <li><Link to="/contact"> Contact Us</Link></li>
         </ul>
       </nav>
       <Form.Group>
