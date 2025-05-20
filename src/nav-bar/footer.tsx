@@ -17,6 +17,9 @@ function Footer() {
           <div className='col'>
             <p className="address">Port Said, Ghayt Al Adah,<br/>Al-Darb Al-Ahmar,Cairo<br/>Governorate 11638, Egypt</p>
           </div>
+          <div className='col'>
+           <img src="/mia-egypt/long-logo.jpg" alt="long logo"></img>
+          </div>
       </div>
     </footer>
   );
