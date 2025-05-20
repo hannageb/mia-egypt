@@ -10,8 +10,8 @@ function Footer() {
           </div>
           <div className='col'>
             <ul className="socials">
-              <li><a href="https://www.instagram.com/miainegypt/"><img className="insta" src="./instagram-logo.png" alt="instagram"></img></a></li>
-              <li><a href="https://www.facebook.com/miaegypt/"><img className="facebook" src="./facebook-logo.png" alt="facebook"></img></a></li>
+              <li><a href="https://www.instagram.com/miainegypt/"><img className="insta" src="/mia-egypt/instagram-logo.png" alt="instagram"></img></a></li>
+              <li><a href="https://www.facebook.com/miaegypt/"><img className="facebook" src="/mia-egypt/facebook-logo.png" alt="facebook"></img></a></li>
             </ul>
           </div>
           <div className='col'>

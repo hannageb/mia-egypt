@@ -5,7 +5,7 @@ function Map() {
   return (
     <div className="container">
       <Navigation />
-      <img src="./map.jpg" alt="map"></img>
+      <img src="/mia-egypt/map.jpg" alt="map"></img>
       <Footer/>
     </div>
   );

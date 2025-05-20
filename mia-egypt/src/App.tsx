@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="container">
       <Navigation />
-      <img src="./full_logo.png" alt="icon w/ text"></img>
+      <img src="/mia-egypt/full_logo.png" alt="icon w/ text"></img>
       <Footer/>
     </div>
   );
