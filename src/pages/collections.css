@@ -7,6 +7,9 @@
 }
 
 .itm-tag{
+    font-size: 10px;
+    position: relative;
+    bottom: -40px;
     width: max-content;
     padding: 5px;
     align-content: center;
@@ -18,6 +21,24 @@
     height: max-content;
     background-color: rgba(59, 17, 6, 0.84);
     color: whitesmoke;
-    z-index:2;
+    z-index: 2;
     line-height: 0.5;
+    width: 239px;
+    padding: 2px 3px;
+}
+
+
+.col {
+  flex: 50%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.col, .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

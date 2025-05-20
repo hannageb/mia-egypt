@@ -1,6 +1,7 @@
 import './collections.css'
 import Navigation from '../nav-bar/nav-bar'
 import Footer from '../nav-bar/footer';
+import { Form } from 'react-bootstrap';
 //import { useState } from 'react';
 
 /**
@@ -41,10 +42,10 @@ function AddItem(name: string, origin: string, centuryAD: number, centuryAH: num
     return (
         <><div className="item-container">
             {item.tags.map((tag: string) => (
-                <p className="itm-tag" style={{padding: '10px', borderRadius: '30px', backgroundColor: item.tagColor, justifyContent: 'center'}}>{tag}</p>
+                <p className="itm-tag" style={{padding: '10px', borderRadius: '30px', backgroundColor: item.tagColor, display: 'table-cell'}}>{tag}</p>
             ))}
             <img className="itm-img" src={item.img} alt={item.name}></img>
-            <div className="popup" style={{width: '245px', padding: '4px'}}>
+            <div className="popup">
                 <h2 className="itm-title">{item.name}</h2>
                 <p>{item.origin}</p>
                 <p>{item.centuryAD} AD / {item.centuryAH} AH</p>
@@ -54,18 +55,32 @@ function AddItem(name: string, origin: string, centuryAD: number, centuryAH: num
     )
 }
 
-/*
-function filter(){
-
-
-
+function Filter(){
     return (
-
-    
+        <div>
+        <Form.Group className="time-periods">
+            <Form.Check label="Umayyad-Ayyubid" type="checkbox" value="Umayyad-Ayyubid"/>
+            <Form.Check label="Fatimid" type="checkbox" value="Fatimid"/>
+            <Form.Check label="Mamluk" type="checkbox" value="Mamluk"/>
+            <Form.Check label="Mamluk-Ottoman" type="checkbox" value="Mamluk-Ottoman"/>
+            <Form.Check label="Ottoman-Muhammad Ali" type="checkbox" value="Ottoman-Muhammad Ali"/>
+        </Form.Group>
+        <Form.Group className="types">
+            <Form.Check label="Ceramics" type="checkbox" value="Ceramics"/>
+            <Form.Check label="Coins" type="checkbox" value="Coins"/>
+            <Form.Check label="Glass" type="checkbox" value="Glass"/>
+            <Form.Check label="Ivory" type="checkbox" value="Ivory"/>
+            <Form.Check label="Jewelry" type="checkbox" value="Jewelry"/>
+            <Form.Check label="Manuscripts" type="checkbox" value="Manuscripts"/>
+            <Form.Check label="Metals" type="checkbox" value="Metals"/>
+            <Form.Check label="Stones" type="checkbox" value="Stones"/>
+            <Form.Check label="Textiles" type="checkbox" value="Textiles"/>
+            <Form.Check label="Weapons" type="checkbox" value="Weapons"/>
+            <Form.Check label="Wood" type="checkbox" value="Wood"/>
+        </Form.Group>
+        </div>
     )
-
 } 
-*/
 
 
 function Collections(){
@@ -77,11 +92,10 @@ function Collections(){
         <h4 style={{padding: '10px'}}>Our Collections</h4>
         <div className="container">
             <div className="row">
-                <div className="search">
-                </div>
+                <div className="search"></div>
             </div>
             <div className="col">
-                {/*<Filter/>*/}
+                <Filter/>
             </div>
             <div className="col">
                 {candlestick}
