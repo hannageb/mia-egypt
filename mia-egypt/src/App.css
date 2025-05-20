@@ -6,6 +6,14 @@ body{
     opacity: 80%;
 }
 
+.container{
+    display:grid;
+    grid-template-rows:auto 1fr auto;
+    grid-template-columns:100%;
+    min-height:100vh;
+    min-height:100svh;
+}
+
 img {
     align-items: center;
     justify-content: center;
