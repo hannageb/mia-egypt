@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
+    max-width: 100%;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    max-width: 100%;
 }
 
 .icon{
@@ -25,7 +25,7 @@ li, a, button, select {
 }
 
 header{
-    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
