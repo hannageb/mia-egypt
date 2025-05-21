@@ -1,3 +1,18 @@
+.col {
+  flex: 50%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.col, .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 footer{
     position: relative;
     max-width: 100%;
@@ -34,19 +49,4 @@ footer{
 
 .socials li, a:hover{
     color: #9d9d9d
-}
-
-.col {
-  flex: 50%;
-}
-
-.row {
-  display: flex;
-  width: 100%;
-}
-
-.col, .row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }

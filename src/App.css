@@ -1,0 +1,11 @@
+body{
+    z-index: 0;
+     background-image: url("/public/background.jpg");
+}
+
+.img-container{
+    max-height: 100%;
+    margin: auto;
+    background-color: aqua;
+    z-index: 2;
+}

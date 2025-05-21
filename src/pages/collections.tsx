@@ -20,6 +20,7 @@ class Item{
     img: string = ""; // path field to image
     desc: string = "";
     id: number = 0;
+    visible: boolean = true;
 
     constructor(name: string, origin: string, centuryAD: number, centuryAH: number, hall: number, tags: string[], tagColor: string, img: string, desc: string, id: number){
         this.name= name;
@@ -152,17 +153,22 @@ const entireCollection: Item[] = [
 ]
 
 function ItemCard({item}: {item: Item}){
+    const [visible, setVisiblity] = useState<boolean>(false);
+    const popup = visible ? <div className="popup">
+                    <h2 className="itm-title">{item.name}</h2>
+                    <p>{item.origin}</p>
+                    <p>{item.centuryAD} AD / {item.centuryAH} AH</p>
+                </div> : <div></div>
+
+
     return(
         <div className="item-container">
                 {item.tags.map((tag: string) => (
                     <p className="itm-tag" style={{padding: '10px', borderRadius: '30px', backgroundColor: item.tagColor, display: 'table-cell'}}>{tag}</p>
                 ))}
-                <img className="itm-img" src={item.img} alt={item.name}></img>
-                <div className="popup">
-                    <h2 className="itm-title">{item.name}</h2>
-                    <p>{item.origin}</p>
-                    <p>{item.centuryAD} AD / {item.centuryAH} AH</p>
-                </div>
+                <img className="itm-img" src={item.img} alt={item.name} onMouseEnter={() => setVisiblity(true)} onMouseLeave={() => setVisiblity(false)}></img>
+                {popup}
+
             </div>
     )
 }
@@ -170,38 +176,39 @@ function ItemCard({item}: {item: Item}){
  * https://plainenglish.io/blog/how-to-implement-a-search-bar-in-react-js
  */
 
-const SearchBar = () => {
-        const [searchInput, setSearchInput] = useState<string>("");
-        const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-            event.preventDefault();
-            setSearchInput(event.target.value);
+function Collections(){
+    const [visibleItems, setVisibleItems] = useState<Item[]>(entireCollection)
+    const [searchInput, setSearchInput] = useState<string>("");
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchInput(event.target.value);
+    }
+    const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (!searchInput){
+            setVisibleItems(entireCollection)
         }
-        if (searchInput.length > 0){
-            entireCollection.filter((item: Item) => item.tags.includes(searchInput))
+        if (e.key === 'Enter') {
+            const filteredCollection = entireCollection.filter((item: Item) => item.visible = (item.tags.some(tag => tag.toLowerCase().includes(searchInput.toLowerCase())) || item.name.toLowerCase().includes(searchInput.toLowerCase()) || item.desc.toLowerCase().includes(searchInput.toLowerCase())))
+            setVisibleItems(filteredCollection)
         }
-        return(
-            <div className="container" style={{justifyContent: 'center'}}>
-                <input type="text" placeholder="🔎 Search..." onChange={handleChange} value={searchInput} className='search-bar'/>
-                <button className='submit-btn'>Search</button>
-            </div>
-        )
     }
 
-function Collections(){
     return(
         <>
         <Navigation />
-        <h4 style={{padding: '10px'}}>Our Collections</h4>
         <div className="search">
-            <SearchBar/>
+            <div className="container" style={{justifyContent: 'center'}}>
+                <input type="text" placeholder="🔎 Search..." onChange={handleChange} onKeyDown={handleSearch} value={searchInput} className='search-bar'/>
+            </div>
         </div>
         <div className="container">
             <div className="column"><Filter/></div>
             <div className="column2">
                 <div className="item-grid">
-                    {entireCollection.map((item) => (
+                    {visibleItems.map((item) => (
                             <ItemCard key={item.id} item={item}/>
                     ))}
+                    
                 </div>
             </div>
         </div>
