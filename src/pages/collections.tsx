@@ -2,7 +2,7 @@ import './collections.css'
 import Navigation from '../nav-bar/nav-bar'
 import Footer from '../nav-bar/footer';
 import { Form } from 'react-bootstrap';
-//import { useState } from 'react';
+import { useState } from 'react';
 
 /**
  * 
@@ -136,6 +136,18 @@ const entireCollection: Item[] = [
         "/mia-egypt/items/ayyubid-panel.jpg",
         "The object reflects an assembly of wood panels forming a star pattern decorated with foliate designs, in addition to a frieze of naskkhi writing applied on floral background. Those panels were brought to the Museum from the dome of Imam al-Shafi’i",
         408
+    ),
+    new Item(
+        "Hilya",
+        "Egypt",
+        19,
+        13,
+        17,
+        ["Manuscript","Ottoman"],
+        "#c7bdbd",
+        "/mia-egypt/items/ottoman-hilya.jpg",
+        "his honored hilya is giving a description for the prophet Muhammad (PBUH) starting with the Basmalla and a rounded medallion bears the description of the Prophet Muhammad (PBUH) for his features and appearance. The names of the four rightly-guided caliphs are written then a verse from Quran (Surat al-Anbiya’ “We sent thee not, but as a Mercy for all creatures”. The conclusion covers the description of the manners of the prophet Muhammad (PBUH) and carrying the name of the writer and the date “ released and revised by Mahmud known as Galal al-Din in 1223AH.",
+        18209
     )
 ]
 
@@ -154,13 +166,35 @@ function ItemCard({item}: {item: Item}){
             </div>
     )
 }
+/* Search bar from
+ * https://plainenglish.io/blog/how-to-implement-a-search-bar-in-react-js
+ */
+
+const SearchBar = () => {
+        const [searchInput, setSearchInput] = useState<string>("");
+        const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+            event.preventDefault();
+            setSearchInput(event.target.value);
+        }
+        if (searchInput.length > 0){
+            entireCollection.filter((item: Item) => item.tags.includes(searchInput))
+        }
+        return(
+            <div className="container" style={{justifyContent: 'center'}}>
+                <input type="text" placeholder="🔎 Search..." onChange={handleChange} value={searchInput} className='search-bar'/>
+                <button className='submit-btn'>Search</button>
+            </div>
+        )
+    }
 
 function Collections(){
     return(
         <>
         <Navigation />
         <h4 style={{padding: '10px'}}>Our Collections</h4>
-        <div className="search"></div>
+        <div className="search">
+            <SearchBar/>
+        </div>
         <div className="container">
             <div className="column"><Filter/></div>
             <div className="column2">

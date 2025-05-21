@@ -4,10 +4,8 @@ import './contact.css'
 
 function Contact() {
     return(
-        <div className="container">
-            <Navigation />
-            <Footer/>
-        </div>
+       <><Navigation /><div className="container">
+    </div><Footer /></>
     );
 }
 

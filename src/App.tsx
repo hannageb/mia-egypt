@@ -6,11 +6,8 @@ import Footer from './nav-bar/footer';
 
 function App() {
   return (
-    <div className="container">
-      <Navigation />
-      <img src="/mia-egypt/full_logo.png" alt="icon w/ text"></img>
-      <Footer/>
-    </div>
+    <><Navigation /><div className="container">
+    </div><Footer /></>
   );
 }
 
