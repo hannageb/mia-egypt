@@ -8,6 +8,7 @@ import Collections from './pages/collections';
 import Map from './pages/map';
 import History from './pages/history';
 import Contact from './pages/contact';
+import Visit from './pages/visit';
 
 
 const root = ReactDOM.createRoot(
@@ -17,6 +18,7 @@ root.render(
   <HashRouter>
     <Routes>
       <Route path="/" element={<App/>}/>
+      <Route path="/visit" element={<Visit/>}/>
       <Route path="/collections" element={<Collections/>}/>
       <Route path="/map" element={<Map />}/>
       <Route path="/history" element={<History/>}/>

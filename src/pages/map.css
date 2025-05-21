@@ -2,6 +2,11 @@ img{
     z-index: auto;
     max-width: 100%;
     padding: 0%;
+    position: relative;
+}
+
+.umayyad-abbasid, .fatimid,.ayyubid,.calligraphy,.mamluk,.mamluk-ottoman,.medicine,.nature,.ottoman,.ottoman2{
+    position: absolute;
 }
 
 .umayyad-abbasid{

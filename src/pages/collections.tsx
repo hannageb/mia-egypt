@@ -2,7 +2,7 @@ import './collections.css'
 import Navigation from '../nav-bar/nav-bar'
 import Footer from '../nav-bar/footer';
 import { Form } from 'react-bootstrap';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 /**
  * 
@@ -36,35 +36,6 @@ class Item{
     }
 }
 
-function Filter(){
-    return (
-        <div>
-        <h4>Time Period</h4>
-        <Form.Group className="time-periods">
-            <Form.Check label="Umayyad-Ayyubid" type="checkbox" value="Umayyad-Ayyubid"/>
-            <Form.Check label="Fatimid" type="checkbox" value="Fatimid"/>
-            <Form.Check label="Mamluk" type="checkbox" value="Mamluk"/>
-            <Form.Check label="Mamluk-Ottoman" type="checkbox" value="Mamluk-Ottoman"/>
-            <Form.Check label="Ottoman-Muhammad Ali" type="checkbox" value="Ottoman-Muhammad Ali"/>
-        </Form.Group>
-        <h4>Type</h4>
-        <Form.Group className="types">
-            <Form.Check label="Ceramics" type="checkbox" value="Ceramics"/>
-            <Form.Check label="Coins" type="checkbox" value="Coins"/>
-            <Form.Check label="Glass" type="checkbox" value="Glass"/>
-            <Form.Check label="Ivory" type="checkbox" value="Ivory"/>
-            <Form.Check label="Jewelry" type="checkbox" value="Jewelry"/>
-            <Form.Check label="Manuscripts" type="checkbox" value="Manuscripts"/>
-            <Form.Check label="Metals" type="checkbox" value="Metals"/>
-            <Form.Check label="Stones" type="checkbox" value="Stones"/>
-            <Form.Check label="Textiles" type="checkbox" value="Textiles"/>
-            <Form.Check label="Weapons" type="checkbox" value="Weapons"/>
-            <Form.Check label="Wood" type="checkbox" value="Wood"/>
-        </Form.Group>
-        </div>
-    )
-} 
-
 const entireCollection: Item[] = [
     new Item(
         "Candlestick",
@@ -84,7 +55,7 @@ const entireCollection: Item[] = [
         4,
         10,
         2,
-        ["Fatimid", "Ceramic"],
+        ["Fatimid", "Ceramics"],
         "#4395a4",
         "/mia-egypt/items/fatimid-shard.jpg",
         "This fragment depicts what is believed by some to be the portrait of Jesus Christ, with a beard and long hair, carrying a book ,thought to be the Bible, bestowing his blessings with his right hand. His two fingers symbolize the dual nature of Jesus, and some researchers believe that his other three fingers symbolize the two letters Alpha and Omega, as mentioned in the Apocalypse of St.John. This scene is repeated in Coptic Art in the wall paintings of the monastery of Bawīt, in Upper Egypt, 5th century AD, which reflects the religious tolerance towards non Moslems in the Fatimid period.",
@@ -144,11 +115,35 @@ const entireCollection: Item[] = [
         19,
         13,
         17,
-        ["Manuscript","Ottoman"],
+        ["Ottoman", "Manuscripts"],
         "#c7bdbd",
         "/mia-egypt/items/ottoman-hilya.jpg",
-        "his honored hilya is giving a description for the prophet Muhammad (PBUH) starting with the Basmalla and a rounded medallion bears the description of the Prophet Muhammad (PBUH) for his features and appearance. The names of the four rightly-guided caliphs are written then a verse from Quran (Surat al-Anbiya’ “We sent thee not, but as a Mercy for all creatures”. The conclusion covers the description of the manners of the prophet Muhammad (PBUH) and carrying the name of the writer and the date “ released and revised by Mahmud known as Galal al-Din in 1223AH.",
+        "This honored hilya is giving a description for the prophet Muhammad (PBUH) starting with the Basmalla and a rounded medallion bears the description of the Prophet Muhammad (PBUH) for his features and appearance. The names of the four rightly-guided caliphs are written then a verse from Quran (Surat al-Anbiya’ “We sent thee not, but as a Mercy for all creatures”. The conclusion covers the description of the manners of the prophet Muhammad (PBUH) and carrying the name of the writer and the date “ released and revised by Mahmud known as Galal al-Din in 1223AH.",
         18209
+    ),
+    new Item(
+        "Necklace",
+        "Egypt",
+        12,
+        6,
+        22,
+        ["Fatimid","Jewelry"],
+        "#4395a4",
+        "/mia-egypt/items/fatimid-necklace.jpg",
+        "This necklace consists of twenty-four elongated pieces. Suspended from the center is a crescent-shaped pendant decorated in enamel and inscribed with ‘al-‘Izz al-Da’im’ (perpetual glory)",
+        13749
+    ),
+    new Item(
+        "Mosque Lamp",
+        "Egypt",
+        12,
+        6,
+        22,
+        ["Mamluk", "Glass"],
+        "#c9ab73",
+        "/mia-egypt/items/mamluk-lamp.jpg",
+        "This mosque lamp, made in the name of Amir Safy al-Din Shayku, is adorned with various decorations depicting Quranic verses from Ṣūrat al-Nῡr and phrases of invocation, the decoration is executed in multi-colored enamel.",
+        328
     )
 ]
 
@@ -157,7 +152,8 @@ function ItemCard({item}: {item: Item}){
     const popup = visible ? <div className="popup">
             <h2 className="itm-title">{item.name}</h2>
             <p>{item.origin}</p>
-            <p>{item.centuryAD} AD / {item.centuryAH} AH</p>
+            <p>{item.centuryAD}th century AD / {item.centuryAH}th century AH</p>
+            <p>Hall {item.hall}</p>
         </div> : <div></div>
         
         
@@ -178,19 +174,45 @@ function ItemCard({item}: {item: Item}){
 function Collections(){
     const [visibleItems, setVisibleItems] = useState<Item[]>(entireCollection)
     const [searchInput, setSearchInput] = useState<string>("");
+    const [filters, setFilters] = useState<string[]>([]);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchInput(event.target.value);
+        if (event.target.value === ""){
+            setSearchInput("")
+        }
     }
+
     const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (!searchInput){
             setVisibleItems(entireCollection)
         }
         if (e.key === 'Enter') {
-            const filteredCollection = entireCollection.filter((item: Item) => item.visible = (item.tags.some(tag => tag.toLowerCase().includes(searchInput.toLowerCase())) || item.name.toLowerCase().includes(searchInput.toLowerCase()) || item.desc.toLowerCase().includes(searchInput.toLowerCase())))
+            let filteredCollection = entireCollection.filter((item: Item) => item.visible = (item.tags.some(tag => tag.toLowerCase().includes(searchInput.toLowerCase())) || item.name.toLowerCase().includes(searchInput.toLowerCase()) || item.desc.toLowerCase().includes(searchInput.toLowerCase())))
             setVisibleItems(filteredCollection)
         }
     }
+
+    const handleFilter = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setFilters((prevFilters) => {
+            const newFilters = event.target.checked ? [...prevFilters, event.target.value] : prevFilters.filter((f) => f !== event.target.value);
+            return newFilters;
+        })
+    }
+
+    useEffect(() => {
+        let filtered: Item[] = entireCollection
+        if (filters){
+            filtered = entireCollection.filter((i:Item) => filters.some((f) => i.tags.some((tag) => tag.toLowerCase().includes(f.toLowerCase()))))
+        }
+        if (searchInput.trim() !== ""){
+            filtered = entireCollection.filter((item: Item) => item.visible = (item.tags.some(tag => tag.toLowerCase().includes(searchInput.toLowerCase())) || item.name.toLowerCase().includes(searchInput.toLowerCase()) || item.desc.toLowerCase().includes(searchInput.toLowerCase())))
+        } 
+        if (!searchInput.trim() || !filters){
+            filtered = entireCollection;
+        }
+        setVisibleItems(filtered);
+    }, [filters, searchInput])
 
     return(
         <>
@@ -201,7 +223,33 @@ function Collections(){
             </div>
         </div>
         <div className="container">
-            <div className="column"><Filter/></div>
+            <div className="column">
+                <div>
+                    <h4>Time Period</h4>
+                    <Form.Group className="time-periods">
+                        <Form.Check label="Umayyad-Ayyubid" type="checkbox" value="Umayyad-Ayyubid"  onChange={handleFilter}/>
+                        <Form.Check label="Fatimid" type="checkbox" value="Fatimid"  onChange={handleFilter}/>
+                        <Form.Check label="Mamluk" type="checkbox" value="Mamluk"  onChange={handleFilter}/>
+                        <Form.Check label="Mamluk-Ottoman" type="checkbox" value="Mamluk-Ottoman"  onChange={handleFilter}/>
+                        <Form.Check label="Ottoman" type="checkbox" value="Ottoman" onChange={handleFilter}/>
+                        <Form.Check label="Ottoman-Muhammad Ali" type="checkbox" value="Ottoman-Muhammad Ali" onChange={handleFilter}/>
+                    </Form.Group>
+                    <h4>Type</h4>
+                    <Form.Group className="types">
+                        <Form.Check label="Ceramics" type="checkbox" value="Ceramics"   onChange={handleFilter}/>
+                        <Form.Check label="Coins" type="checkbox" value="Coins"  onChange={handleFilter}/>
+                        <Form.Check label="Glass" type="checkbox" value="Glass"  onChange={handleFilter}/>
+                        <Form.Check label="Ivory" type="checkbox" value="Ivory"  onChange={handleFilter}/>
+                        <Form.Check label="Jewelry" type="checkbox" value="Jewelry"  onChange={handleFilter}/>
+                        <Form.Check label="Manuscripts" type="checkbox" value="Manuscripts"  onChange={handleFilter}/>
+                        <Form.Check label="Metals" type="checkbox" value="Metals"  onChange={handleFilter}/>
+                        <Form.Check label="Stones" type="checkbox" value="Stones"  onChange={handleFilter}/>
+                        <Form.Check label="Textiles" type="checkbox" value="Textiles"  onChange={handleFilter}/>
+                        <Form.Check label="Weapons" type="checkbox" value="Weapons"  onChange={handleFilter}/>
+                        <Form.Check label="Wood" type="checkbox" value="Wood"  onChange={handleFilter}/>
+                    </Form.Group>
+                 </div>
+            </div>
             <div className="column2">
                 <div className="item-grid">
                     {visibleItems.map((item) => (

@@ -1,15 +1,6 @@
 import React from 'react';
 import './footer.css';
 
-/**
- * 
- *  FOREIGNER:
-Adult: EGP 340\ Student: EGP 170
-
-EGYPTIANS\ ARABS:
-Adult: EGP 20 \ Student: EGP 10
- */
-
 function Footer() {
   return (
     <footer>

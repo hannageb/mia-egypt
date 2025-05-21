@@ -32,7 +32,8 @@
     height: 300px;
     width: 245px;
     z-index: auto;
-    object-fit: cover;
+    object-fit:cover;
+    align-content: center;
 }
 
 .itm-tag{
@@ -40,23 +41,22 @@
     position: relative;
     bottom: -50px;
     width: max-content;
-    padding: 5px;
     align-content: center;
     color: whitesmoke;
     font-family: "Raleway", sans-serif;
-    left: 5px;
+    left: 1%;
     font-weight: 600;
+    z-index: 2;
 }
 
 .popup{
     position: absolute;
     bottom: 0;
-    background-color: rgba(59, 17, 6, 0.84);
+    background-color: rgba(59, 17, 6, 0.60);
     color: whitesmoke;
     z-index: 2;
     line-height: 0.5;
-    width: 239px;
-    padding: 2px 3px;
+    width: 100%;
 }
 
 .search-bar{
