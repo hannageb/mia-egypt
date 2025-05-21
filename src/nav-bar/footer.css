@@ -1,11 +1,11 @@
 footer{
     position: relative;
-    width: 100%;
+    max-width: 100%;
     left: 0;
     bottom: 0;
     right: 0;
     padding: 6px 3%;
-    background-color: rgb(80, 56, 46);
+    background-color: rgb(53, 33, 25);
     color: whitesmoke;
 }
 

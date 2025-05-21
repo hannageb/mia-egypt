@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    width: 100%;
+    max-width: 100%;
 }
 
 .icon{
@@ -44,7 +44,7 @@ header{
 
 .nav_links li{
     display: inline-block;
-    padding: 0px 10px
+    padding: 0px 20px
 }
 
 .nav_links li, a{
@@ -58,7 +58,7 @@ header{
 
 button {
     margin-left: 10px;
-    padding: 0px 10px;
+    padding: 0px 20px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
     color: whitesmoke;
@@ -69,7 +69,6 @@ button:hover{
 }
 
 select {
-    margin-left: 5px;
     padding: 9px 10px;
     background-color: rgb(101, 66, 28);
     border: none;
