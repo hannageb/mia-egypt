@@ -155,20 +155,19 @@ const entireCollection: Item[] = [
 function ItemCard({item}: {item: Item}){
     const [visible, setVisiblity] = useState<boolean>(false);
     const popup = visible ? <div className="popup">
-                    <h2 className="itm-title">{item.name}</h2>
-                    <p>{item.origin}</p>
-                    <p>{item.centuryAD} AD / {item.centuryAH} AH</p>
-                </div> : <div></div>
-
-
-    return(
+            <h2 className="itm-title">{item.name}</h2>
+            <p>{item.origin}</p>
+            <p>{item.centuryAD} AD / {item.centuryAH} AH</p>
+        </div> : <div></div>
+        
+        
+        return(
         <div className="item-container">
                 {item.tags.map((tag: string) => (
-                    <p className="itm-tag" style={{padding: '10px', borderRadius: '30px', backgroundColor: item.tagColor, display: 'table-cell'}}>{tag}</p>
+                    <p className="itm-tag" style={{marginRight: '7px', padding: '10px', borderRadius: '30px', backgroundColor: item.tagColor, display: 'inline-block'}}>{tag}</p>
                 ))}
                 <img className="itm-img" src={item.img} alt={item.name} onMouseEnter={() => setVisiblity(true)} onMouseLeave={() => setVisiblity(false)}></img>
                 {popup}
-
             </div>
     )
 }
