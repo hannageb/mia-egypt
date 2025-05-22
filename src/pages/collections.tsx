@@ -16,23 +16,25 @@ import "../i18n"
 function ItemCard({item}: {item: Item}){
     const {t} = useTranslation();
     const [visible, setVisiblity] = useState<boolean>(false);
-    const popup = visible ? <div className="popup">
+    let popup = <div></div>
+    if (visible){
+        popup = (
+        <div className="popup">
             <h2 className="itm-title">{t(item.name.toLowerCase().split(" ").join("_"))}</h2>
             <p>{t(item.origin === "Egypt/Syria" ? "egypt_syria" : item.origin.toLowerCase())}</p>
             <p>{t("century")}{item.centuryAD}{t("ad")} / {item.centuryAH}{t("ah")}</p>
             <p>{t("Hall")} {item.hall}</p>
-        </div> : <div></div>
-        
+        </div>)
+    }      
         
         return(
-        <div className="item-container">
+            <div className="item-container">
                 {item.tags.map((tag: string) => (
-                    <p className="itm-tag" style={{marginRight: '7px', padding: '10px', borderRadius: '30px', backgroundColor: item.tagColor, display: 'inline-block'}}>{t(tag === "Mamluk-Ottoman" ? "mamlukOttoman_tag" : tag === "Ottoman-Muhammad Ali" ? "ottomanMuhammadAliـtag" : tag.toLowerCase())}</p>
-                ))}
-                <img className="itm-img" src={item.img} alt={item.name} onMouseEnter={() => setVisiblity(true)} onMouseLeave={() => setVisiblity(false)}></img>
+                    <p key={tag} className="itm-tag" style={{ marginRight: '7px', padding: '10px', borderRadius: '30px', backgroundColor: item.tagColor, display: 'inline-block' }}>{tag === "Mamluk-Ottoman" ? t("mamlukOttoman_tag") : tag === "Ottoman-Muhammad Ali" ? t("ottomanMuhammadAli_tag") : t(tag.toLowerCase())}</p>))}
+                    <img className="itm-img" src={item.img} alt={item.name} onMouseEnter={() => setVisiblity(true)} onMouseLeave={() => setVisiblity(false)}></img>
                 {popup}
             </div>
-    )
+    );
 }
 /* Search bar from
  * https://plainenglish.io/blog/how-to-implement-a-search-bar-in-react-js
@@ -58,34 +60,37 @@ function Collections(){
         }
     }
 
+    /**
+     * @param e 
+     * filters based on the search 
+     */
     const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (!searchInput){
             setVisibleItems(entireCollection)
         }
-        if (e.key === 'Enter') {
-            let filteredCollection = entireCollection.filter((item: Item) => item.visible = (item.tags.some(tag => tag.toLowerCase().includes(searchInput.toLowerCase())) || item.name.toLowerCase().includes(searchInput.toLowerCase()) || item.desc.toLowerCase().includes(searchInput.toLowerCase())))
-            setVisibleItems(filteredCollection)
-        }
+        let filteredCollection = entireCollection.filter((item: Item) => item.visible = (item.tags.some(tag => tag.toLowerCase().includes(searchInput.toLowerCase())) || item.name.toLowerCase().includes(searchInput.toLowerCase())|| item.origin.toLowerCase().includes(searchInput.toLowerCase())));
+        setVisibleItems(filteredCollection)
     }
 
     const handleFilter = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setFilters((prevFilters) => {
-            const newFilters = event.target.checked ? [...prevFilters, event.target.value] : prevFilters.filter((f) => f !== event.target.value);
-            return newFilters;
-        })
+        console.log(`Searching for... ${event.target.value}`)
+        setFilters((prevFilters) => 
+            event.target.checked ? [...prevFilters, event.target.value] : prevFilters.filter((f) => f !== event.target.value));
     }
 
     useEffect(() => {
         let filtered: Item[] = entireCollection
-        if (filters){
-            filtered = entireCollection.filter((i:Item) => filters.some((f) => i.tags.some((tag) => tag.toLowerCase().includes(f.toLowerCase()))))
+
+        if (!searchInput && !filters.length){
+            setVisibleItems(entireCollection)
+            return;
+        }
+        if (filters.length){
+            filtered = entireCollection.filter((i:Item) => filters.some((f) => i.tags.some((tag) => tag.toLowerCase() === (f.toLowerCase()))))
         }
         if (searchInput.trim() !== ""){
-            filtered = entireCollection.filter((item: Item) => item.visible = (item.tags.some(tag => tag.toLowerCase().includes(searchInput.toLowerCase())) || item.name.toLowerCase().includes(searchInput.toLowerCase()) || item.desc.toLowerCase().includes(searchInput.toLowerCase())))
+            filtered = entireCollection.filter((item: Item) => item.visible = (item.tags.some(tag => tag.toLowerCase().startsWith(searchInput.toLowerCase())) || item.name.toLowerCase().includes(searchInput.toLowerCase()) || item.origin.toLowerCase().includes(searchInput.toLowerCase())))
         } 
-        if (!searchInput.trim() || !filters){
-            filtered = entireCollection;
-        }
         setVisibleItems(filtered);
     }, [filters, searchInput])
 
@@ -107,7 +112,7 @@ function Collections(){
                         <Form.Check label={t("mamluk")} type="checkbox" value="Mamluk"  onChange={handleFilter}/>
                         <Form.Check label={t("mamlukOttoman_tag")} type="checkbox" value="Mamluk-Ottoman"  onChange={handleFilter}/>
                         <Form.Check label={t("ottoman")} type="checkbox" value="Ottoman" onChange={handleFilter}/>
-                        <Form.Check label={("ottomanMuhammadAliـtag")} type="checkbox" value="Ottoman-Muhammad Ali" onChange={handleFilter}/>
+                        <Form.Check label={t("ottomanMuhammadAli_tag")} type="checkbox" value="Ottoman-Muhammad Ali" onChange={handleFilter}/>
                     </Form.Group>
                     <h4>---</h4>
                     <Form.Group className="types">

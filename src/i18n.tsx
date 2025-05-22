@@ -37,8 +37,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 mamlukOttoman_map: "Mamluk-Ottoman",
                 mamlukOttoman_tag: "Mamluk-Ottoman",
                 ottoman: "Ottoman",
-                ottomanMuhammadAliـmap: "Mamluk-Muhammad Ali",
-                ottomanMuhammadAliـtag:"Mamluk-Muhammad Ali",
+                ottomanMuhammadAliـmap: "Ottoman-Muhammad Ali",
+                ottomanMuhammadAli_tag: "Ottoman-Muhammad Ali",
                 safavid: "Safavid",
                 /* types of items */
                 metals: "Metals",

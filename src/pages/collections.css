@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+*{
+    font-family: "Raleway", sans-serif;
+}
+
 .container{
     padding: 10px;
     margin: 10px;
@@ -43,10 +47,10 @@
     width: max-content;
     align-content: center;
     color: whitesmoke;
-    font-family: "Raleway", sans-serif;
     left: 1%;
     font-weight: 600;
     z-index: 2;
+    overflow: hidden;
 }
 
 .popup{
@@ -56,9 +60,14 @@
     color: whitesmoke;
     z-index: 2;
     line-height: 0.5;
-    width: 89%;
+    width: 89%;   
 }
 
+.itm-img:hover > .popup{
+  top: 0;
+  transform: scale(1);
+    opacity: 1;
+}
 .search-bar{
     width: 80%;
     font-size: 20px;
@@ -74,5 +83,4 @@
 
 .time-periods, .types{
     font-size: 17px;
-    font-family: "Raleway", sans-serif;
 }

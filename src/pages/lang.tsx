@@ -10,10 +10,12 @@ function LanugageChanger(){
         i18n.changeLanguage(e.target.value);
         setLanguage(e.target.value);
         localStorage.setItem("lang", e.target.value);
+        window.location.reload();
     }
 
     useEffect(() => {
-        document.body.dir = i18n.dir()
+        document.body.dir = i18n.dir();
+       
     }, [])
 
     return(
@@ -22,7 +24,7 @@ function LanugageChanger(){
                 <option  value="placeholder" disabled> 🌐 </option>
                 <option key={"en"} value="en" >English</option>
                 <option key={"ar"} value="ar">عربي</option>
-                <option key={"fr"} value="fr">Français</option>
+                {/*<option key={"fr"} value="fr">Français</option>*/}
             </Form.Select>
         </div>
     );
