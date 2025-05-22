@@ -10,21 +10,24 @@ import History from './pages/history';
 import Contact from './pages/contact';
 import Visit from './pages/visit';
 
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <HashRouter>
-    <Routes>
-      <Route path="/" element={<App/>}/>
-      <Route path="/visit" element={<Visit/>}/>
-      <Route path="/collections" element={<Collections/>}/>
-      <Route path="/map" element={<Map />}/>
-      <Route path="/history" element={<History/>}/>
-      <Route path="/contact" element={<Contact/>}/>
-    </Routes>
-  </HashRouter>
+  <React.StrictMode>
+    <React.Suspense fallback="Loading...">
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<App/>}/>
+        <Route path="/visit" element={<Visit/>}/>
+        <Route path="/collections" element={<Collections/>}/>
+        <Route path="/map" element={<Map />}/>
+        <Route path="/history" element={<History/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+      </Routes>
+    </HashRouter>
+    </React.Suspense>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
