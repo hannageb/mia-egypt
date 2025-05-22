@@ -3,6 +3,7 @@ import Navigation from '../nav-bar/nav-bar'
 import Footer from '../nav-bar/footer';
 import { Form } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 /**
  * 
@@ -144,6 +145,18 @@ const entireCollection: Item[] = [
         "/mia-egypt/items/mamluk-lamp.jpg",
         "This mosque lamp, made in the name of Amir Safy al-Din Shayku, is adorned with various decorations depicting Quranic verses from Ṣūrat al-Nῡr and phrases of invocation, the decoration is executed in multi-colored enamel.",
         328
+    ),
+    new Item(
+        "Umayyad Dinar",
+        "Egypt/Syria",
+        7,
+        1,
+        14, 
+        ["Umayyad","Coins"],
+        "#1f1b1c",
+        "/mia-egypt/items/umayyad-dinar.jpg",
+        "This dinar is the final stage of the process of the arabization of the coinage in Islam. It is the first model that has pure Arabic writings. The Dinar is dated to 77 AH.",
+        26078
     )
 ]
 
@@ -172,9 +185,16 @@ function ItemCard({item}: {item: Item}){
  */
 
 function Collections(){
+    const location = useLocation();
     const [visibleItems, setVisibleItems] = useState<Item[]>(entireCollection)
     const [searchInput, setSearchInput] = useState<string>("");
     const [filters, setFilters] = useState<string[]>([]);
+
+    useEffect(() => {
+        if (location.state?.filters) {
+            setFilters(location.state.filters);
+        }
+    }, [location.state]);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchInput(event.target.value);
