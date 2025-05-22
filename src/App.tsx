@@ -9,9 +9,11 @@ function App() {
   const{t} = useTranslation();
   return (
     <><Navigation />
-    <div className="home-background"></div>
-    <h2 style={{justifyContent: 'center'}}>{t("header")}</h2>
-    <img src="/mia-egypt/logos/full-logo.png" alt="full logo" className="full-logo"></img>
+    <div className="container">
+      <h2 style={{textAlign: 'center'}}>{t("header")}</h2>
+      <img src="/mia-egypt/logos/full-logo.png" alt="full logo" className="full-logo"></img>
+    </div>
+
     <Footer /></>
   );
 }

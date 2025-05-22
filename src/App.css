@@ -3,9 +3,8 @@ body{
      background-image: url("/public/background.jpg");
 }
 
-.img-container{
-    max-height: 100%;
-    margin: auto;
-    background-color: aqua;
-    z-index: 2;
+
+.full-logo{
+    position: relative;
+    align-items: center;
 }
