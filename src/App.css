@@ -3,8 +3,73 @@ body{
      background-image: url("/public/background.jpg");
 }
 
+.h-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(233, 224, 212, 0.9);
+}
+
+.h-header{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.logo-and-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 40px;
+    z-index: 0;
+}
+
+.logo-container{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.logo-bkgd{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid #4b2c0f;
+    background-color: rgba(233, 224, 212);;
+    z-index: 0;
+}
 
 .full-logo{
     position: relative;
+    width: 70%;
+    height: 70%;
+    z-index: 1;
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
+
+.full-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.mission{
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+    word-break: normal;
+    hyphens: manual;
+    justify-content: end;
+    z-index: 1;
+}
+

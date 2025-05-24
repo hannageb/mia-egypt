@@ -9,13 +9,21 @@ function App() {
   const{t} = useTranslation();
   return (
     <><Navigation />
-    <div className="container">
-      <h2 style={{textAlign: 'center'}}>{t("header")}</h2>
-      <img src="/mia-egypt/logos/full-logo.png" alt="full logo" className="full-logo"></img>
+    <div className="h-container">
+        <h2 className="h-header">{t("header")}</h2>
+        <div className='logo-and-text'>
+          <div className="mission">
+            <p>{t("mission")}</p>
+          </div>
+          <div className="logo-container">
+            <div className="logo-bkgd"></div>
+            <div className="full-logo">
+              <img src="/mia-egypt/logos/full-logo.png" alt="logo with text"></img>
+            </div>
+          </div>
+        </div>
     </div>
-
-    <Footer /></>
+    <Footer/></>
   );
 }
-
 export default App;

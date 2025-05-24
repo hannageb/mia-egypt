@@ -40,6 +40,10 @@ function ItemCard({item}: {item: Item}){
  * https://plainenglish.io/blog/how-to-implement-a-search-bar-in-react-js
  */
 
+/**
+ * search bar only works in English
+ */
+
 function Collections(){
     const {t} = useTranslation();
     const location = useLocation();

@@ -15,7 +15,10 @@ function Visit() {
     //const{t} = useTranslation();
     return(
         <><Navigation />
-        <div className="container">
+        <div className="v-container">
+            <div className="bus"></div>
+            <div className="car"></div>
+            <div className="metro"></div>
         </div>
         <Footer /></>
     );

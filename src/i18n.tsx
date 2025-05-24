@@ -26,6 +26,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 century: "",
                 ah: " AH",
                 ad:" AD",
+                mission: "The mission of the Museum of Islamic Art (MIA) is to display, preserve and interpret Islamic artifacts, and to reach a maximum number of national and international visitors. MIA also aims to develop education programs, encourage scientific research and collaborations as well as foster a greater understanding and appreciation of the contributions made by the Islamic civilization to world heritage in the arts and sciences. MIA also hopes to encourage dialogue, thus increasing tolerance and mutual understanding among people.",
+                f_times: "Mon-Thurs 9:00-5:00 | Fri 9:00-11:30 & 1:30-5:00",
+                address: "Port Said, Ghayt Al Adah, | Al-Darb Al-Ahmar,Cairo | Governorate 11638, Egypt",
                 /* time periods */
                 time_period: "Time Periods",
                 umayyad: "Umayyad",
@@ -67,7 +70,11 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 syria: "Syria",
                 iran: "Iran",
                 türkiye: "Türkiye",
-                egypt_syria: "Egypt or Syria"
+                egypt_syria: "Egypt or Syria",
+                /* timeline */
+                1869: "The idea of establishing a museum for Islamic arts and antiquities first came up during the rule of Khedive Ismail. This was achieved during the rule of Khedive Tawfiq, his son.",
+                1880: "Franz Pasha, the court architect to Khedive Ismail, collected 111 antiques and artifacts of the Islamic period in the eastern wing of al-Hakim Bi Amr illah’s Mosque.",
+
             }
             
         },
@@ -91,6 +98,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                century: "القرن ",
                ah: "هـ",
                ad: "م",
+               mission: "يمتلك المتحف رسالة تهدف إلى الوصول إلى أكبر عدد من الزوار سواء من المصريين أو الأجانب, هذا إلى جانب حفظ التحف الإسلامية, مع الاهتمام بالتعليم والبحث والتعاون العلمي, مع تشجيع الفهم الجيد لإسهامات الحضارة الإسلامية وما قدمته للتراث العالمي في كل من الفنون والعلوم, في إطار من الحوار والتقارب بين الحضارات",
+               f_times: "الاتنين-الاربعاء: 9:00ص-5:00م | الجمعة: 9:00ص-11:30ص & 1:30م-5:00م",
+               address: "ميدان باب الخلق, شارع بورسعيد, أمام مديرية أمن القاهرة 11638",
                /* time periods */
                time_period: "العصور",
                umayyad: "الأموي",
@@ -132,7 +142,12 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                syria: "سوريا",
                iran: "ايران",
                türkiye: "تركيا",
-               egypt_syria: "مصر او سوريا"
+               egypt_syria: "مصر او سوريا",
+               /* timeline 
+               1869: "وقد بدأت فكرة إنشاء متحف للفنون والآثار الإسلامية في عصر الخديوي إسماعيل وبالتحديد في سنة 1869م.",
+               1880: "عندما قام فرانتز باشا بجمع التحف الأثرية التي ترجع إلى العصر الإسلامي في الإيوان الشرقي لجامع الحاكم بأمر الله",
+               1892: "وتم بعد ذلك بناء مبنى صغير في صحن جامع الحاكم أطلق عليه اسم المتحف العربي تحت إدارة فرانتزباشا الذي ترك الخدمة سنة 1892م."
+               */
             }
         }
     }

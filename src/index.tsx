@@ -13,9 +13,10 @@ import Visit from './pages/visit';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className="loading-screen"></div>}>
     <HashRouter>
       <Routes>
         <Route path="/" element={<App/>}/>
