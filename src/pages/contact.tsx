@@ -11,8 +11,11 @@ import './contact.css'
 
 function Contact() {
     return(
-       <><Navigation /><div className="container">
-    </div><Footer /></>
+        <><Navigation />
+        <div className="container">
+            
+        </div>
+        <Footer /></>
     );
 }
 

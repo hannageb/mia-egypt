@@ -1,5 +1,5 @@
 .col {
-  flex: 50%;
+    flex: 50%;
 }
 
 .row {
@@ -9,7 +9,7 @@
 
 .col, .row{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -22,31 +22,16 @@ footer{
     padding: 6px 3%;
     background-color: rgb(53, 33, 25);
     color: whitesmoke;
+    
 }
 
-.insta{
-    width: 20px;
+.socials img {
     height: 20px;
-}
-
-.facebook{
-    width: 25px;
-    height: 25px;
-}
-.socials{
-    list-style: none;
+    align-items: center;
+    object-fit: contain;
 }
 
 .socials li{
-    display: block;
+    display: inline-block;
     padding: 0px 20px
-}
-
-.socials li, a{
-    color: whitesmoke;
-    transition: all 0.3s ease 0s;
-}
-
-.socials li, a:hover{
-    color: #9d9d9d
 }
