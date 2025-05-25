@@ -65,6 +65,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 necklace: "Necklace",
                 hilya: "Hilya",
                 panel: "Panel",
+                copper_table: "Copper Table",
                 /* origin of items */
                 egypt: "Egypt",
                 syria: "Syria",
@@ -137,6 +138,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                necklace: "عقد",
                hilya: "الحلية",
                panel: "لوح",
+               copper_table: "منضدة",
                /* origin of items */
                egypt: "مصر",
                syria: "سوريا",

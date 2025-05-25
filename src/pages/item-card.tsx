@@ -146,5 +146,15 @@ export const entireCollection: Item[] = [
         "/mia-egypt/items/umayyad-dinar.jpg",
         "This dinar is the final stage of the process of the arabization of the coinage in Islam. It is the first model that has pure Arabic writings. The Dinar is dated to 77 AH.",
         26078
+    ),
+    new Item(
+        "Copper Table",
+        "Egypt",
+        14, 8, 8,
+        ["Mamluk", "Metals"],
+        "#a08f76",
+        "/mia-egypt/items/mamluk-table.jpeg",
+        "This kind of table was commonly called a dinner chair by some scholars of Islamic Art, whereas it was most probably used as a Quran holder in the mosques or for carrying the candlesticks during prayer time on both sides of the Miḥrāb. It could have also been used for holding personal accessories. The table takes the shape of a hexagonal prism decorated with vegetal, geometric, animal, and epigraphic motifs quoting Quranic and invocational phrases. A small double-leafed door opens up on one of its sides and is decorated with vegetal elements. The legs of the table are connected with six supports bearing the name of the artisan who made it “Muḥammad ibn Sunqur al Bughdādi al Sankari and the date of manufacturing 728 AH/327-1328 AD. The inscriptions on the table refer to the name of the mamluk sultan al-Nāṣir Muḥammad ibn Qalāwūn who reigned Egypt for three periods; the last one was from 709-741AD/1309-1340AD.",
+        139
     )
 ]

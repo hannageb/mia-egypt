@@ -13,8 +13,24 @@ body {
     border-width: 45px;
     border-top: 45px;
     border-bottom: 45px;
-    border-radius: 60%;
+    border-radius: 50%;
     padding: 5px;
+}
+
+.icon:hover{
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
 
 li, a, button, select {

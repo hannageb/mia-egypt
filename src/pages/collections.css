@@ -57,10 +57,13 @@
     position: absolute;
     bottom: 0;
     background-color: rgba(59, 17, 6, 0.60);
-    color: whitesmoke;
     z-index: 2;
+    width: 88%;   
+}
+
+.popup p, .popup h2 {
+    color: whitesmoke;
     line-height: 0.5;
-    width: 89%;   
 }
 
 .itm-img:hover > .popup{

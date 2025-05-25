@@ -22,6 +22,7 @@ function App() {
             </div>
           </div>
         </div>
+        {/* carousel of some featured items */}
     </div>
     <Footer/></>
   );
