@@ -104,12 +104,9 @@ function Collections(){
         <div className="search">
             <div className="container" style={{justifyContent: 'center'}}>
                 <input type="text" placeholder={t("search")} onChange={handleChange} onKeyDown={handleSearch} value={searchInput} className='search-bar'/>
-            </div>
-        </div>
-        <div className="container">
-            <div className="column">
-                <div>
-                    <h4>{t("time_period")}</h4>
+                <div className="dropdown">
+                <button className="dropbtn">Filter by Time Period</button>
+                <div className="dropdown-content">
                     <Form.Group className="time-periods">
                         <Form.Check label={t("umayyad_abbasid")} type="checkbox" value="Umayyad-Ayyubid"  onChange={handleFilter}/>
                         <Form.Check label={t("fatimid")} type="checkbox" value="Fatimid"  onChange={handleFilter}/>
@@ -118,7 +115,11 @@ function Collections(){
                         <Form.Check label={t("ottoman")} type="checkbox" value="Ottoman" onChange={handleFilter}/>
                         <Form.Check label={t("ottomanMuhammadAli_tag")} type="checkbox" value="Ottoman-Muhammad Ali" onChange={handleFilter}/>
                     </Form.Group>
-                    <h4>---</h4>
+                </div>
+            </div>
+            <div className="dropdown">
+                <button className="dropbtn">Filter by Type</button>
+                <div className="dropdown-content">
                     <Form.Group className="types">
                         <Form.Check label={t("ceramics")} type="checkbox" value="Ceramics"   onChange={handleFilter}/>
                         <Form.Check label={t("coins")} type="checkbox" value="Coins"  onChange={handleFilter}/>
@@ -132,15 +133,15 @@ function Collections(){
                         <Form.Check label={t("weapons")} type="checkbox" value="Weapons"  onChange={handleFilter}/>
                         <Form.Check label={t("wood")} type="checkbox" value="Wood"  onChange={handleFilter}/>
                     </Form.Group>
-                 </div>
-            </div>
-            <div className="column2">
-                <div className="item-grid">
-                    {visibleItems.map((item) => (
-                            <ItemCard key={item.id} item={item}/>
-                    ))}
-                    
                 </div>
+                </div>
+            </div>
+        </div>
+        <div className="container">
+            <div className="item-grid">
+                {visibleItems.map((item) => (
+                        <ItemCard key={item.id} item={item}/>
+                ))}
             </div>
         </div>
         <Footer/></>
