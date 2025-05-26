@@ -1,0 +1,15 @@
+img{
+    z-index: auto;
+    max-width: 100%;
+    padding: 0%;
+    position: relative;
+}
+
+.map {
+  transition: transform .2s;
+  cursor: zoom-in;
+}
+
+.map:hover {
+  transform: scale(1.1);
+}
