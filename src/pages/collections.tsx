@@ -1,5 +1,4 @@
 import './collections.css'
-import Navigation from '../nav-bar/nav-bar'
 import Footer from '../nav-bar/footer';
 import { Form } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
@@ -45,6 +44,7 @@ function ItemCard({item}: {item: Item}){
  */
 
 function Collections(){
+    console.log("Collections rendered!")
     const {t} = useTranslation();
     const location = useLocation();
     const [visibleItems, setVisibleItems] = useState<Item[]>(entireCollection)
@@ -99,7 +99,6 @@ function Collections(){
 
     return(
         <>
-        <Navigation />
         <div className="search">
             <div className="container" style={{justifyContent: 'center'}}>
                 <input type="text" placeholder={t("search")} onChange={handleChange} onKeyDown={handleSearch} value={searchInput} className='search-bar'/>

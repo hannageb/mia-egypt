@@ -1,7 +1,6 @@
 import 'i18next';
 import {useTranslation} from "react-i18next"
 import Footer from '../nav-bar/footer';
-import Navigation from '../nav-bar/nav-bar'
 import './history.css' 
 
 /**
@@ -13,8 +12,10 @@ import './history.css'
 
 function History() {
     const {t} = useTranslation();
+    console.log("History rendered!")
+
     return(
-    <><Navigation/>
+    <>
     <div className='container'>
         <div className="timeline">
             <div className="hist-container left">

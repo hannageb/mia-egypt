@@ -1,5 +1,4 @@
 import Footer from '../nav-bar/footer';
-import Navigation from '../nav-bar/nav-bar'
 import './contact.css' 
 
 /* 
@@ -10,8 +9,9 @@ import './contact.css'
  */
 
 function Contact() {
+    console.log("Contact rendered!")
     return(
-        <><Navigation />
+        <>
         <div className="container">
             
         </div>

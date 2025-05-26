@@ -1,4 +1,3 @@
-import React from 'react';
 import './footer.css';
 import {useTranslation} from "react-i18next";
 
@@ -17,13 +16,13 @@ function Footer() {
           </div>
           <div className='col'>
             <ul className="socials">
-              <li><a href="https://www.instagram.com/miainegypt/"><img alt="insta" src="/mia-egypt/logos/instagram-logo.png"></img></a></li>
-              <li><a href="https://www.facebook.com/miaegypt/"><img alt="fb" src="/mia-egypt/logos/facebook-logo.png"></img></a></li>
-              <li><a href="https://www.youtube.com/channel/UCSmBrnaDLCS4yncyAieG5rw"><img alt="yt" src="/mia-egypt/logos/youtube-logo.png"></img></a></li>
+              <li><a href="https://www.instagram.com/miainegypt/"><img alt="insta" src="/logos/instagram-logo.png"></img></a></li>
+              <li><a href="https://www.facebook.com/miaegypt/"><img alt="fb" src="/logos/facebook-logo.png"></img></a></li>
+              <li><a href="https://www.youtube.com/channel/UCSmBrnaDLCS4yncyAieG5rw"><img alt="yt" src="/logos/youtube-logo.png"></img></a></li>
             </ul>
           </div>
           <div className='col'>
-           <img src="/mia-egypt/logos/long-logo.jpg" alt="long logo"></img>
+           <img src="/logos/long-logo.jpg" alt="long logo"></img>
           </div>
       </div>
     </footer>

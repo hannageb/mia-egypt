@@ -1,4 +1,3 @@
-import React  from 'react';
 import './nav-bar.css';
 import {Link} from "react-router-dom";
 import LanguageChanger from '../pages/lang';
@@ -12,7 +11,7 @@ function Navigation() {
   const{t} = useTranslation();
   return (
     <header>
-      <Link to="/"><img src="/mia-egypt/logos/icon.png" alt="icon" className="icon"></img></Link>
+      <Link to="/"><img src="/logos/icon.png" alt="icon" className="icon"></img></Link>
       <nav>
         <ul className="nav_links">
           <li><Link to="/visit">{t("visit")}</Link></li>
