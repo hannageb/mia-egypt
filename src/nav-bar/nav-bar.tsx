@@ -1,5 +1,5 @@
 import './nav-bar.css';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import LanguageChanger from '../pages/lang';
 import { useTranslation } from 'react-i18next';
 
@@ -11,14 +11,22 @@ function Navigation() {
   const{t} = useTranslation();
   return (
     <header>
-      <Link to="/"><img src="/logos/icon.png" alt="icon" className="icon"></img></Link>
+      <NavLink to="/"><img src="/logos/icon.png" alt="icon" className="icon"></img></NavLink>
       <nav>
         <ul className="nav_links">
-          <li><Link to="/visit">{t("visit")}</Link></li>
-          <li><Link to="/collections">{t("collections")}</Link></li>
-          <li><Link to="/map">{t("map")} </Link></li>
-          <li><Link to="/history">{t("history")} </Link></li>
-          <li><Link to="/contact">{t("contact")}</Link></li>
+          <li><NavLink to="/visit" style={({isActive}) => (
+            isActive ? {fontWeight: 'bold',} :{})}>{t("visit")}</NavLink></li>
+          <li><NavLink to="/collections" style={({isActive}) => (
+            isActive ? {fontWeight: 'bold',}:{})}>{t("collections")}</NavLink></li>
+          <li><NavLink to="/map" style={({isActive}) => (
+            isActive ? {fontWeight: 'bold',} : {})
+            }>{t("map")}</NavLink></li>
+          <li><NavLink to="/history" style={({isActive}) => (
+            isActive ? {fontWeight: 'bold',} : {})
+            }>{t("history")} </NavLink></li>
+          <li><NavLink to="/contact" style={({isActive}) => (
+            isActive ? {fontWeight: 'bold',} : {})
+            }>{t("contact")}</NavLink></li>
         </ul>
       </nav>
       <LanguageChanger/>

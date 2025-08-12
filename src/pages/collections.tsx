@@ -2,7 +2,6 @@ import './collections.css'
 import Footer from '../nav-bar/footer';
 import { Form } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import {useTranslation} from "react-i18next";
 import {Item, entireCollection} from './item-card'
 import "../i18n"
@@ -12,10 +11,17 @@ import "../i18n"
  * all images are width: 245px, height: 300px 
  */
  
-function ItemCard({item}: {item: Item}){
+
+
+export function ItemCard({item}: {item: Item}){
     const {t} = useTranslation();
+    const tabsOpen: string[] = [];
     const [visible, setVisiblity] = useState<boolean>(false);
+    const [expanded, setExpanded] = useState<boolean>(false);
+    const [tabCount, setTabCount] = useState<number>(tabsOpen.length);
+    
     let popup = <div></div>
+    
     if (visible){
         popup = (
         <div className="popup">
@@ -25,16 +31,76 @@ function ItemCard({item}: {item: Item}){
             <p>{t("Hall")} {item.hall}</p>
         </div>)
     }      
-        
-        return(
-            <div className="item-container">
-                {item.tags.map((tag: string) => (
-                    <p key={tag} className="itm-tag" style={{ marginRight: '7px', padding: '10px', borderRadius: '30px', backgroundColor: item.tagColor, display: 'inline-block' }}>{tag === "Mamluk-Ottoman" ? t("mamlukOttoman_tag") : tag === "Ottoman-Muhammad Ali" ? t("ottomanMuhammadAli_tag") : t(tag.toLowerCase())}</p>))}
-                    <img className="itm-img" src={item.img} alt={item.name} onMouseEnter={() => setVisiblity(true)} onMouseLeave={() => setVisiblity(false)}></img>
-                {popup}
-            </div>
+
+    /**
+     * tabsCount isnt updating,
+     * nor is the tabsOpen[]
+     */
+    const openTab = () => {
+        setExpanded(!expanded);
+        tabsOpen.push(item.name)
+        setTabCount(1+tabCount);
+        console.log(`new tab: ${item.name} \n tab count: ${tabCount}`);
+        console.log(`opened tabs are now: ${tabsOpen}. \n you have ${tabsOpen.length} tabs open`)
+    }
+
+    const closeTab = () => {
+            setExpanded(false);
+            tabsOpen.filter((t: string) => (t != item.name))
+            setTabCount(tabCount - 1);
+            console.log(`closed tab: ${item.name} \n tab count: ${tabCount}`);
+        }
+
+    const SideBar = () => {
+        let sideBar = <div></div>
+
+        const TabBar = () => {
+            let tabBar = <div></div>
+            if (tabCount > 1){
+                tabBar = (
+                    <div className="tabbar">
+                        <p style={{fontSize: '20px'}}>{t(item.name)}
+                            <button className="collapse" onClick={() => {closeTab()}}>x</button>
+                        </p>
+                    </div>
+                )
+            } 
+            return <div>{tabBar}</div>
+        }
+
+        if (expanded){
+            sideBar = (
+            <div className="sidebar" style={{width: '35%', padding: '2%'}}>
+                <img className="side-img" src={item.img} alt={item.name}></img>
+                <h2 className="itm-title">{t(item.name.toLowerCase().split(" ").join("_"))}
+                    <button className="collapse" onClick={() => {closeTab()}}>x</button>
+                </h2>
+                <p>{t(item.origin === "Egypt/Syria" ? "egypt_syria" : item.origin.toLowerCase())}</p>
+                <p>{t("century")}{item.centuryAD}{t("ad")} / {item.centuryAH}{t("ah")}</p>
+                <p>{t("Hall")} {item.hall}</p>
+                <div style={{paddingTop: '2%'}}>
+                    <p>{t(item.name.toLowerCase().split(" ").join("_").concat("_desc"))}</p>
+                </div>
+            </div>)
+        }
+        return (
+            <><TabBar /><div>{sideBar}</div></>
+        )
+
+    }
+
+    return(
+        <div className="item-container">
+            {item.tags.map((tag: string) => (
+                <p key={tag} className="itm-tag" style={{ backgroundColor: item.tagColor }}>{tag === "Mamluk-Ottoman" ? t("mamlukOttoman_tag") : tag === "Ottoman-Muhammad Ali" ? t("ottomanMuhammadAli_tag") : t(tag.toLowerCase())}</p>))}
+            <button className="expand" onClick={() => {openTab()}}>☰</button><img className="itm-img" src={item.img} alt={item.name} onMouseEnter={() => setVisiblity(true)} onMouseLeave={() => setVisiblity(false)}></img>
+            {popup}
+            <SideBar/>
+        </div> 
     );
 }
+
+
 /* Search bar from
  * https://plainenglish.io/blog/how-to-implement-a-search-bar-in-react-js
  */
@@ -43,19 +109,13 @@ function ItemCard({item}: {item: Item}){
  * search bar only works in English
  */
 
-function Collections(){
+export function Collections(){
     console.log("Collections rendered!")
     const {t} = useTranslation();
-    const location = useLocation();
     const [visibleItems, setVisibleItems] = useState<Item[]>(entireCollection)
     const [searchInput, setSearchInput] = useState<string>("");
     const [filters, setFilters] = useState<string[]>([]);
-
-    useEffect(() => {
-        if (location.state?.filters) {
-            setFilters(location.state.filters);
-        }
-    }, [location.state]);
+    
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchInput(event.target.value);
@@ -106,6 +166,7 @@ function Collections(){
                 <button className="dropbtn">Filter by Time Period</button>
                 <div className="dropdown-content">
                     <Form.Group className="time-periods">
+                         <Form.Check label={t("rashidun")} type="checkbox" value="Rashidun"  onChange={handleFilter}/>
                         <Form.Check label={t("umayyad_abbasid")} type="checkbox" value="Umayyad-Ayyubid"  onChange={handleFilter}/>
                         <Form.Check label={t("fatimid")} type="checkbox" value="Fatimid"  onChange={handleFilter}/>
                         <Form.Check label={t("mamluk")} type="checkbox" value="Mamluk"  onChange={handleFilter}/>
@@ -137,9 +198,7 @@ function Collections(){
         </div>
         <div className="container">
             <div className="item-grid">
-                {visibleItems.map((item) => (
-                        <ItemCard key={item.id} item={item}/>
-                ))}
+                {visibleItems.map((item) => (<ItemCard key={item.id} item={item} />))}
             </div>
         </div>
         <Footer/></>

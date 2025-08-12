@@ -1,4 +1,3 @@
-
 export class Item{
     name: string = "";
     origin: string = "";
@@ -6,7 +5,7 @@ export class Item{
     centuryAH: number = 0;
     hall: number = 0;
     tags: string[] = [];
-    tagColor: string = "";
+    tagColor: string = ""; // colour of 'item type'
     img: string = ""; // path field to image
     desc: string = "";
     id: number = 0;
@@ -36,7 +35,7 @@ export const entireCollection: Item[] = [
         ["Mamluk","Metals"],
         "#a08f76",
         "/items/mamluk-candlestick.jpg",
-        "This candlestick bears inscriptions referring to the mamluk sultan Qāytbāy 872-901AH/1467-1495AD, and was made for the holy shrine of the prophet Muḥammad (pbuh) in Medina. It is one of those candlesticks characterized by a tapering cylindrical base, a long neck and a conical candle groove. The body and neck are decorated with an epigraphic band mentioning the name and titles of sultan Qāytbāy. It should be noticed that the first letters of the words take the shape of rising criss-crossing flames, providing them with a sense of livelihood and mobility. Groups of epigraphic blazons of sultan Qāytbāy intermingle with the text. The central disk in the body bears an inscription which says :“this was endowed to the holly shrine by our lord, the sultan al-Malik al-Ashraf Abul-Nasr Qāytbāy in the year 880AH in the holy month of Ramadan",
+        'candlestick_desc',
         4297
     ),
     new Item(
@@ -48,7 +47,7 @@ export const entireCollection: Item[] = [
         ["Fatimid", "Ceramics"],
         "#4395a4",
         "/items/fatimid-shard.jpg",
-        "This fragment depicts what is believed by some to be the portrait of Jesus Christ, with a beard and long hair, carrying a book ,thought to be the Bible, bestowing his blessings with his right hand. His two fingers symbolize the dual nature of Jesus, and some researchers believe that his other three fingers symbolize the two letters Alpha and Omega, as mentioned in the Apocalypse of St.John. This scene is repeated in Coptic Art in the wall paintings of the monastery of Bawīt, in Upper Egypt, 5th century AD, which reflects the religious tolerance towards non Moslems in the Fatimid period.",
+        'shard_desc',
         5397
     ),
     new Item(
@@ -60,7 +59,7 @@ export const entireCollection: Item[] = [
         ["Ayyubid","Stones"],
         "#663e1d",
         "/items/ayyubid-stucco.jpg",
-        "This unique example was brought from the Madrasah of sultan al-Kāmil 622AH/1225AD, that was overlooking al-Mu’izz street at that time. The window has a border frame decorated with Kufic writings and interlaced vegetal motifs.",
+        'stucco_frame_desc',
         1403
     ),
     new Item(
@@ -72,7 +71,7 @@ export const entireCollection: Item[] = [
         ["Ottoman","Textiles"],
         "#9d7742",
         "/items/ottoman-saddle.jpg",
-        "This saddle is a living proof of the importance of compassion in Islam. In this vein, Islamic Art has produced numerous other artifacts designed to protect and take care of different animals. So, despite of its being a horse saddle made merely to cover a horse’s back, the artisan who made it toiled at decorating it with velvet, silk and silver threads. This demonstrates, beyond any doubt, the philosophy of beauty, mercy and compassion to living creatures of the Islamic Civilization.",
+        'horse_saddle_desc',
         12027
     ),
     new Item(
@@ -84,7 +83,7 @@ export const entireCollection: Item[] = [
         ["Mamluk-Ottoman", "Ivory"],
         "#361706",
         "/items/mamluk-ottoman-kohl.jpg",
-        "Islam considers cleanliness, proper demeanor and good looks as signs of faith. This led to the popularity of cosmetic tools in Islamic Art, such as perfume sprinklers, kohl containers, combs and mirrors.",
+        'kohl_container_desc',
         4050
     ),
     new Item(
@@ -96,7 +95,7 @@ export const entireCollection: Item[] = [
         ["Ayyubid","Wood"],
         "#3b3423",
         "/items/ayyubid-panel.jpg",
-        "The object reflects an assembly of wood panels forming a star pattern decorated with foliate designs, in addition to a frieze of naskkhi writing applied on floral background. Those panels were brought to the Museum from the dome of Imam al-Shafi’i",
+        'panel_desc',
         408
     ),
     new Item(
@@ -108,7 +107,7 @@ export const entireCollection: Item[] = [
         ["Ottoman", "Manuscripts"],
         "#c7bdbd",
         "/items/ottoman-hilya.jpg",
-        "This honored hilya is giving a description for the prophet Muhammad (PBUH) starting with the Basmalla and a rounded medallion bears the description of the Prophet Muhammad (PBUH) for his features and appearance. The names of the four rightly-guided caliphs are written then a verse from Quran (Surat al-Anbiya’ “We sent thee not, but as a Mercy for all creatures”. The conclusion covers the description of the manners of the prophet Muhammad (PBUH) and carrying the name of the writer and the date “ released and revised by Mahmud known as Galal al-Din in 1223AH.",
+        'hilya_desc',
         18209
     ),
     new Item(
@@ -120,7 +119,7 @@ export const entireCollection: Item[] = [
         ["Fatimid","Jewelry"],
         "#4395a4",
         "/items/fatimid-necklace.jpg",
-        "This necklace consists of twenty-four elongated pieces. Suspended from the center is a crescent-shaped pendant decorated in enamel and inscribed with ‘al-‘Izz al-Da’im’ (perpetual glory)",
+        'necklace_desc',
         13749
     ),
     new Item(
@@ -132,7 +131,7 @@ export const entireCollection: Item[] = [
         ["Mamluk", "Glass"],
         "#c9ab73",
         "/items/mamluk-lamp.jpg",
-        "This mosque lamp, made in the name of Amir Safy al-Din Shayku, is adorned with various decorations depicting Quranic verses from Ṣūrat al-Nῡr and phrases of invocation, the decoration is executed in multi-colored enamel.",
+        'mosque_lamp_desc',
         328
     ),
     new Item(
@@ -144,7 +143,7 @@ export const entireCollection: Item[] = [
         ["Umayyad","Coins"],
         "#1f1b1c",
         "/items/umayyad-dinar.jpg",
-        "This dinar is the final stage of the process of the arabization of the coinage in Islam. It is the first model that has pure Arabic writings. The Dinar is dated to 77 AH.",
+        'umayyad_dinar_desc',
         26078
     ),
     new Item(
@@ -154,7 +153,47 @@ export const entireCollection: Item[] = [
         ["Mamluk", "Metals"],
         "#a08f76",
         "/items/mamluk-table.jpeg",
-        "This kind of table was commonly called a dinner chair by some scholars of Islamic Art, whereas it was most probably used as a Quran holder in the mosques or for carrying the candlesticks during prayer time on both sides of the Miḥrāb. It could have also been used for holding personal accessories. The table takes the shape of a hexagonal prism decorated with vegetal, geometric, animal, and epigraphic motifs quoting Quranic and invocational phrases. A small double-leafed door opens up on one of its sides and is decorated with vegetal elements. The legs of the table are connected with six supports bearing the name of the artisan who made it “Muḥammad ibn Sunqur al Bughdādi al Sankari and the date of manufacturing 728 AH/327-1328 AD. The inscriptions on the table refer to the name of the mamluk sultan al-Nāṣir Muḥammad ibn Qalāwūn who reigned Egypt for three periods; the last one was from 709-741AD/1309-1340AD.",
+        'copper_table_desc',
         139
+    ),
+    new Item(
+        "Dish",
+        "Türkiye",
+        16, 10, 12,
+        ["Ottoman", "Ceramics"],
+        "#4395a4",
+        "/items/turkish-dish.jpg",
+        'dish_desc',
+        15858
+    ),
+    new Item(
+        "Glass Vessel",
+        "Egypt/Syria",
+         7, 2, 25,
+         ["Umayyad", "Glass"],
+        "#c9ab73",
+        "/items/glass-vessel.jpg",
+        'glass_vessel_desc',
+        7203
+    ),
+    new Item(
+        "Manuscript",
+        "Türkiye",
+        16, 10, 25,
+        ["Ottoman", "Manuscripts"],
+        "#c7bdbd",
+        "/items/ottoman-book.jpg",
+        'manuscript_desc',
+        3907
+    ),
+    new Item(
+        "Tombstone",
+        "Egypt",
+        7, 11, 19,
+        ["Rashidun", "Stones"],
+        "#663e1d",
+        "/items/tombstone.jpg",
+        'tombstone_desc',
+        1508
     )
 ]

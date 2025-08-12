@@ -78,12 +78,15 @@
     align-content: center;
 }
 
-.itm-tag{
-    font-size: 10px;
+.itm-tag, .expand{
+    margin-right: 7px;
+    padding: 10px;
+    border-radius: 30px;
+    display: inline-flex;
+    font-size: 12px;
     position: relative;
     bottom: -50px;
     width: max-content;
-    align-content: center;
     color: whitesmoke;
     left: 1%;
     font-weight: 600;
@@ -102,7 +105,6 @@
 .popup p, .popup h2 {
     color: whitesmoke;
     line-height: 0.4;
-   
 }
 
 .itm-img:hover > .popup{
@@ -110,6 +112,39 @@
   transform: scale(1);
     opacity: 1;
 }
+
+.expand{
+  color: whitesmoke;
+  background-color: transparent;
+  border: transparent;
+}
+
+.collapse{
+  color: whitesmoke;
+  background-color: transparent;
+  border: transparent;
+}
+
+.sidebar {
+  height: 100%;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(59, 17, 6, 0.90);
+  color: whitesmoke;
+  overflow-x: hidden;
+  transition: 0.5s ease-in-out;
+  padding-top: 60px;
+}
+
+.side-img{
+  width: 100%;
+  z-index: 3;
+  object-fit: cover;
+  justify-self: center;
+}
+
 .search-bar{
     width: 80%;
     font-size: 20px;

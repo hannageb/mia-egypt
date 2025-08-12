@@ -19,7 +19,6 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
     <Navigation/>
-    <Suspense fallback={<div className="loading-screen"></div>}>
       <Routes>
         <Route path="/" element={<App/>}/>
         <Route path="/visit" element={<Visit/>}/>
@@ -28,7 +27,6 @@ root.render(
         <Route path="/history" element={<History/>}/>
         <Route path="/contact" element={<Contact/>}/>
       </Routes>
-    </Suspense>
     </BrowserRouter>
     </React.StrictMode>
 );

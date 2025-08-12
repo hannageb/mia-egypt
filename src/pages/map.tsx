@@ -5,11 +5,9 @@ import "../i18n"*/
 
 function Map() {
   //const {t} = useTranslation();
-  let zoom = 1.1;
   return (
     <><div className="container">
-      {/** so this zoom doesn't actually work so fix pls  */}
-      <img style={{transition: 'transform .2s', cursor: 'zoom-in', transform: 'scale(zoom)'}} src="/mia-egypt/map.jpg" alt="map" className="map" onClick={()=>zoom++}></img>
+      <img src="map.jpg" alt="map" className="map"></img>
     </div><Footer /></>
   );
 }

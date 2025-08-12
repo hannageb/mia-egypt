@@ -15,16 +15,16 @@ function LanugageChanger(){
 
     useEffect(() => {
         document.body.dir = i18n.dir();
-       
     }, [])
 
     return(
         <div className="btn-container">
-            <Form.Select defaultValue={language} onChange={changeLanguage}>
-                <option  value="placeholder" disabled> 🌐 </option>
+            <Form.Select defaultValue={language} onChange={changeLanguage} style={{textAlign: 'center'}}>
+                <option value="placeholder" disabled> 🌐 </option>
                 <option key={"en"} value="en" >English</option>
                 <option key={"ar"} value="ar">عربي</option>
-                {/*<option key={"fr"} value="fr">Français</option>*/}
+                <option key={"fr"} value="fr" disabled>Français</option>
+                <option key={"es"} value="es" disabled>Español</option>
             </Form.Select>
         </div>
     );

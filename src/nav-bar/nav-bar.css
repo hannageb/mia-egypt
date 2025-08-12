@@ -5,6 +5,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    z-index: 10;
 }
 
 .icon{
@@ -17,20 +18,10 @@ body {
     padding: 5px;
 }
 
-.icon:hover{
-    animation-name: spin;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; 
-}
 
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
+
+.icon:hover{
+    background-color: #cbd2d4;
 }
 
 li, a, button, select {
@@ -48,6 +39,15 @@ header{
     align-items: center;
     padding: 6px 3%;
     background-color: rgb(53, 33, 25);
+    position: sticky;
+    z-index: 10;
+}
+
+
+@media (max-width: 1024px){
+    header{
+        max-width: 100%;
+    }
 }
 
 .logo{
