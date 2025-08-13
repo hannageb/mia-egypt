@@ -19,12 +19,12 @@ root.render(
     <BrowserRouter>
     <Navigation/>
       <Routes>
-        <Route path="/" element={<App/>}/>
-        <Route path="/visit" element={<Visit/>}/>
-        <Route path="/collections" element={<Collections/>}/>
-        <Route path="/map" element={<Map />}/>
-        <Route path="/history" element={<History/>}/>
-        <Route path="/contact" element={<Contact/>}/>
+        <Route path="mia-egypt/" element={<App/>}/>
+        <Route path="mia-egypt/visit" element={<Visit/>}/>
+        <Route path="mia-egypt/collections" element={<Collections/>}/>
+        <Route path="mia-egypt/map" element={<Map />}/>
+        <Route path="mia-egypt/history" element={<History/>}/>
+        <Route path="mia-egypt/contact" element={<Contact/>}/>
       </Routes>
     </BrowserRouter>
     </React.StrictMode>

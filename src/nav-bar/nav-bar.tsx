@@ -11,20 +11,20 @@ function Navigation() {
   const{t} = useTranslation();
   return (
     <header>
-      <NavLink to="/"><img src="/logos/icon.png" alt="icon" className="icon"></img></NavLink>
+      <NavLink to="mia-egypt/"><img src="/logos/icon.png" alt="icon" className="icon"></img></NavLink>
       <nav>
         <ul className="nav_links">
-          <li><NavLink to="/visit" style={({isActive}) => (
+          <li><NavLink to="mia-egypt/visit" style={({isActive}) => (
             isActive ? {fontWeight: 'bold',} :{})}>{t("visit")}</NavLink></li>
-          <li><NavLink to="/collections" style={({isActive}) => (
+          <li><NavLink to="mia-egypt/collections" style={({isActive}) => (
             isActive ? {fontWeight: 'bold',}:{})}>{t("collections")}</NavLink></li>
-          <li><NavLink to="/map" style={({isActive}) => (
+          <li><NavLink to="mia-egypt/map" style={({isActive}) => (
             isActive ? {fontWeight: 'bold',} : {})
             }>{t("map")}</NavLink></li>
-          <li><NavLink to="/history" style={({isActive}) => (
+          <li><NavLink to="mia-egypt/history" style={({isActive}) => (
             isActive ? {fontWeight: 'bold',} : {})
             }>{t("history")} </NavLink></li>
-          <li><NavLink to="/contact" style={({isActive}) => (
+          <li><NavLink to="mia-egypt/contact" style={({isActive}) => (
             isActive ? {fontWeight: 'bold',} : {})
             }>{t("contact")}</NavLink></li>
         </ul>

@@ -34,7 +34,7 @@ export const entireCollection: Item[] = [
         9,
         ["Mamluk","Metals"],
         "#a08f76",
-        "/items/mamluk-candlestick.jpg",
+        "/public/items/mamluk-candlestick.jpg",
         'candlestick_desc',
         4297
     ),
