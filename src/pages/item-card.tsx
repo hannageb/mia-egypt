@@ -34,7 +34,7 @@ export const entireCollection: Item[] = [
         9,
         ["Mamluk","Metals"],
         "#a08f76",
-        "public/items/mamluk-candlestick.jpg",
+        "items/mamluk-candlestick.jpg",
         'candlestick_desc',
         4297
     ),
@@ -46,7 +46,7 @@ export const entireCollection: Item[] = [
         2,
         ["Fatimid", "Ceramics"],
         "#4395a4",
-        "public/items/fatimid-shard.jpg",
+        "items/fatimid-shard.jpg",
         'shard_desc',
         5397
     ),
@@ -58,7 +58,7 @@ export const entireCollection: Item[] = [
         6,
         ["Ayyubid","Stones"],
         "#663e1d",
-        "public/items/ayyubid-stucco.jpg",
+        "items/ayyubid-stucco.jpg",
         'stucco_frame_desc',
         1403
     ),
@@ -70,7 +70,7 @@ export const entireCollection: Item[] = [
         20,
         ["Ottoman","Textiles"],
         "#9d7742",
-        "public/items/ottoman-saddle.jpg",
+        "items/ottoman-saddle.jpg",
         'horse_saddle_desc',
         12027
     ),
@@ -82,7 +82,7 @@ export const entireCollection: Item[] = [
         9,
         ["Mamluk-Ottoman", "Ivory"],
         "#361706",
-        "public/items/mamluk-ottoman-kohl.jpg",
+        "items/mamluk-ottoman-kohl.jpg",
         'kohl_container_desc',
         4050
     ),
@@ -94,7 +94,7 @@ export const entireCollection: Item[] = [
         5,
         ["Ayyubid","Wood"],
         "#3b3423",
-        "public/items/ayyubid-panel.jpg",
+        "items/ayyubid-panel.jpg",
         'panel_desc',
         408
     ),
@@ -106,7 +106,7 @@ export const entireCollection: Item[] = [
         17,
         ["Ottoman", "Manuscripts"],
         "#c7bdbd",
-        "public/items/ottoman-hilya.jpg",
+        "items/ottoman-hilya.jpg",
         'hilya_desc',
         18209
     ),
@@ -118,7 +118,7 @@ export const entireCollection: Item[] = [
         22,
         ["Fatimid","Jewelry"],
         "#4395a4",
-        "public/items/fatimid-necklace.jpg",
+        "items/fatimid-necklace.jpg",
         'necklace_desc',
         13749
     ),
@@ -130,7 +130,7 @@ export const entireCollection: Item[] = [
         22,
         ["Mamluk", "Glass"],
         "#c9ab73",
-        "public/items/mamluk-lamp.jpg",
+        "items/mamluk-lamp.jpg",
         'mosque_lamp_desc',
         328
     ),
@@ -142,7 +142,7 @@ export const entireCollection: Item[] = [
         14, 
         ["Umayyad","Coins"],
         "#1f1b1c",
-        "public/items/umayyad-dinar.jpg",
+        "items/umayyad-dinar.jpg",
         'umayyad_dinar_desc',
         26078
     ),
@@ -152,7 +152,7 @@ export const entireCollection: Item[] = [
         14, 8, 8,
         ["Mamluk", "Metals"],
         "#a08f76",
-        "public/items/mamluk-table.jpeg",
+        "items/mamluk-table.jpeg",
         'copper_table_desc',
         139
     ),
@@ -162,7 +162,7 @@ export const entireCollection: Item[] = [
         16, 10, 12,
         ["Ottoman", "Ceramics"],
         "#4395a4",
-        "public/items/turkish-dish.jpg",
+        "items/turkish-dish.jpg",
         'dish_desc',
         15858
     ),
@@ -172,7 +172,7 @@ export const entireCollection: Item[] = [
          7, 2, 25,
          ["Umayyad", "Glass"],
         "#c9ab73",
-        "public/items/glass-vessel.jpg",
+        "items/glass-vessel.jpg",
         'glass_vessel_desc',
         7203
     ),
@@ -182,7 +182,7 @@ export const entireCollection: Item[] = [
         16, 10, 25,
         ["Ottoman", "Manuscripts"],
         "#c7bdbd",
-        "public/items/ottoman-book.jpg",
+        "items/ottoman-book.jpg",
         'manuscript_desc',
         3907
     ),
@@ -192,7 +192,7 @@ export const entireCollection: Item[] = [
         7, 11, 19,
         ["Rashidun", "Stones"],
         "#663e1d",
-        "public/items/tombstone.jpg",
+        "items/tombstone.jpg",
         'tombstone_desc',
         1508
     )

@@ -11,7 +11,7 @@ function Navigation() {
   const{t} = useTranslation();
   return (
     <header>
-      <NavLink to="mia-egypt/"><img src="/logos/icon.png" alt="icon" className="icon"></img></NavLink>
+      <NavLink to="mia-egypt/"><img src="logos/icon.png" alt="icon" className="icon"></img></NavLink>
       <nav>
         <ul className="nav_links">
           <li><NavLink to="mia-egypt/visit" style={({isActive}) => (
