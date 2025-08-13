@@ -1,5 +1,6 @@
 {
-  "name": "mia-egypt-1",
+  "name": "mia-egypt",
+  "homepage": "https://hannageb.github.io/mia-egypt",
   "private": true,
   "version": "0.0.0",
   "type": "module",
