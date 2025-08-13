@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+
+.icon{
+    height: 40px;
+    background-color: #edf0f1;
+    border-width: 45px;
+    border-top: 45px;
+    border-bottom: 45px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+
+
+.icon:hover{
+    background-color: #cbd2d4;
+}
+
+li, a, button, select {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 3%;
+    background-color: rgb(53, 33, 25);
+    position: sticky;
+    z-index: 10;
+}
+
+
+@media (max-width: 1024px){
+    header{
+        max-width: 100%;
+    }
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px
+}
+
+.nav_links li, a{
+    color: whitesmoke;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li, a:hover{
+    color: #9d9d9d
+}
+
+button {
+    margin-left: 10px;
+    padding: 0px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: whitesmoke;
+}
+
+button:hover{
+    color: #9d9d9d
+}
+
+select {
+    padding: 9px 10px;
+    background-color: rgb(101, 66, 28);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: whitesmoke;
+}
