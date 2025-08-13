@@ -25,13 +25,13 @@ function App() {
     <>
       <div className="h-container">
         <div className="top-content">
-          <img className="home-bkgd" src="/home-bkgd.jpg"/>
+          <img className="home-bkgd" src="public/home-bkgd.jpg"/>
           <div className="text-container">
             <span style={{color: '#4B2C0F', fontSize: '20px', fontWeight: 'bold'}}>Our Mission:<br/></span><span style={{color: '#4B2C0F', fontSize: '20px', wordWrap: 'break-word'}}>{t('mission')}</span>
           </div>
           <div className="logo-container">
             <div className="logo-bkgd"></div>
-            <img className="full-logo" src="/logos/full-logo.png" />
+            <img className="full-logo" src="public/logos/full-logo.png" />
           </div>
         </div>
         <div className="placeholder">

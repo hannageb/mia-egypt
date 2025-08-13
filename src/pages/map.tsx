@@ -7,7 +7,7 @@ function Map() {
   //const {t} = useTranslation();
   return (
     <><div className="container">
-      <img src="map.jpg" alt="map" className="map"></img>
+      <img src="public/map.jpg" alt="map" className="map"></img>
     </div><Footer /></>
   );
 }
