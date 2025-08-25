@@ -59,9 +59,7 @@ export function ItemCard({item}: {item: Item}){
             if (tabCount > 1){
                 tabBar = (
                     <div className="tabbar">
-                        <p style={{fontSize: '20px'}}>{t(item.name)}
-                            <button className="collapse" onClick={() => {closeTab()}}>x</button>
-                        </p>
+                        <button className="collapse" onClick={() => {closeTab()}}>x</button>
                     </div>
                 )
             } 
