@@ -97,16 +97,29 @@ body{
     font-size: 24px;
 }
 
+.item-carousel{
+    display: flex;
+    align-items: center;
+}
+
 .carousel-img{
     width: 20%;
     margin: 2%;
     margin-right: 0%;
 }
 
+.carousel-main-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
 .carousel-container{
     display: grid;
     grid-template-columns: repeat(5, 250px);
-    justify-content: center;
+    flex-grow: 1;
 }
 
 @media (max-width: 1180px){
@@ -123,10 +136,15 @@ body{
     border: transparent;
     padding: 0px;
     display: flex;
+    font-size: 2rem;
     justify-content: space-between;
-    
 }
 
 .page-btn :disabled{
     cursor: not-allowed;
+}
+
+.about-MIA{
+    justify-content: center;
+    font-size: 22px;
 }
