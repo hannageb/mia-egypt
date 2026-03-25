@@ -1,5 +1,7 @@
 import Footer from '../nav-bar/footer';
 import './contact.css' 
+import "../i18n"
+import {useTranslation} from "react-i18next";
 
 
 /* 
@@ -11,12 +13,13 @@ import './contact.css'
 
 function Contact() {
     console.log("Contact rendered!")
+    const {t} = useTranslation();
     return(
         <>
         <div className="container">
             <a href="mailto:miainegypt@gmail.com">✉️: miainegypt@gmail.com</a>
             <a href="tel:(202) 3909930 / 3901520">📞: (202) 3909930 / 3901520</a>
-            <a href="http://maps.google.com/?q=Museum of Islamic Art in Cairo">📍: Port Said, Ghayt Al Adah, Al-Darb Al-Ahmar, Cairo Governorate 11638, Egypt </a>
+            <a href="http://maps.google.com/?q=Museum of Islamic Art in Cairo">📍: {t("address")}</a>
             <form style={{padding: "10px"}}>
                 <div className="form-group">
                     <label>Email Address</label><br/>

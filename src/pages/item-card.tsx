@@ -177,13 +177,13 @@ export const entireCollection: Item[] = [
         7203
     ),
     new Item(
-        "Manuscript",
+        "Medicine Manuscript",
         "Türkiye",
         16, 10, 25,
         ["Ottoman", "Manuscripts"],
         "#c7bdbd",
         "items/ottoman-book.jpg",
-        'manuscript_desc',
+        'medicine_manuscript_desc',
         3907
     ),
     new Item(

@@ -70,6 +70,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 dish: "Dish",
                 glass_vessel: "Glass Vessel",
                 manuscript: "Manuscript",
+                medicine_manuscript: "Medicine Manuscript",
                 tombstone: "Tombstone",
                 /* origin of items */
                 egypt: "Egypt",
@@ -93,6 +94,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 glass_vessel_desc:"Glass vessel surrounded by a polychrome glass net, resting on a camel- shaped base. It is a remarkable example of small vessels fixed on the back of an animal or bird",
                 manuscript_desc: "Manuscript of 'Kitab fil-adwiya al-mufrada' by Abu Ja’far al-Ghāfiqi. Al-Ġāfiqi was a physician who lived in Andalusia in 6th c. AH/12th c. AD. This is a scientific manuscript copied in Turkey and ornamented with scenes of plants, explaining their medical benefits, and their usage in curing. Given that it is a scientific manuscript, the copier didn’t give sufficient care to make borders to its pages; but rather focused on drawing the herbs and specify their medical usage.",
                 tombstone_desc:"It is from the master pieces in Islamic art because it is the oldest dated tombstone in Islam and it housed the first model of inscriptions in Islamic art. The tombstone has eight lines inscribed in primitive Kufic. The writings contained the name of the deceased ‘Abd al-Rahman ibn Khayr al-Hagari or al-Hijazi, and some supplications given to him as well as the date of his death in Gumada II 31AH/ Jan-Feb 652AD",
+                medicine_manuscript_desc: "Al-Ġāfiqi was a physician who lived in Andalusia in 6th c. AH/12th c. AD. This is a scientific manuscript copied in Turkey and ornamented with scenes of plants, explaining their medical benefits, and their usage in curing. Given that it is a scientific manuscript, the copier didn’t give sufficient care to make borders to its pages; but rather focused on drawing the herbs and specify their medical usage.",
                 /* timeline */
                 1869: "The idea of establishing a museum for Islamic arts and antiquities first came up during the rule of Khedive Ismail. This was achieved during the rule of Khedive Tawfiq, his son.",
                 1880: "Franz Pasha, the court architect to Khedive Ismail, collected 111 antiques and artifacts of the Islamic period in the eastern wing of al-Hakim Bi Amr illah’s Mosque.",
@@ -155,6 +157,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                umayyad_dinar: "دينار اموي",
                horse_saddle: "سرج حصان",
                stucco_frame: "اطار لنافذة",
+               glass_vessel: "إناء",
+               medicine_manuscript: "الأدوية المفردة للغافقي",
+               tombstone:"شاهد قبر",
                shard: "كسرة",
                necklace: "عقد",
                hilya: "الحلية",
@@ -167,8 +172,11 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                türkiye: "تركيا",
                egypt_syria: "مصر او سوريا",
                /* items themselves */
+               glass_vessel_desc: "إناء من الزجاج يحيط به شبكة مشكلة من الزجاج الملون، وترتكز الشبكة المحيطة به على ظهر جمل من الزجاج، وهو مثال لنوع من الأواني الصغيرة المركبة فوق تمثال حيوان أو طائر.",
                candlestick_desc: "يحمل هذا الشمعدان كتابات تُشير إلي اسم السلطان المملوكي قايتباي872-901هـ/ 1467- 1495م، وقد صُنع برسم الحجرة النبوية الشريفة بمسجد النبي صلى الله عليه وسلم بالمدينة المنورة، وهو من جملة الشماعد التى تميزت بالقاعدة الاسطوانية المخروطية الشكل والرقبة المرتفعة وبيت الشمعة المخروطية الشكل, ويُزخرف بدن ورقبة الشمعدان شريط من الزخارف الكتابية تُشير إلي اسم وألقاب السلطان قايتباي، ويلاحظ أن طوالع الحروف تنتهي بأشكال ألسنة اللهب المتقاطعة وقد أضفت على الكتابة حياة وحركة, يقطع هذا النص الكتابى رنوك كتابية خاصة بالسلطان قايتباى، أما القرص المستدير بالبدن فعليه كتابة نصها ”هذا ما اوقف على الحجرة النبوية مولانا السلطان الملك الاشرف ابو النصر قايتباى عز نصره بتاريخ سنة سبع وثمانين وثمانمائه فى شهر رمضان المعظم قدره",
-               horse_saddle_desc: "تبرهن هذه التحفة الفنية على قيمة الرحمة عند المسلمين، حيث انتج الفن الإسلامي العديد من التحف الفنية لحماية الحيوانات والاهتمام بها، وعلى الرغم من أنها غطاء سرج كان يوضع على ظهر الحصان، إلا أننا نجد أن الفنان قد اعتنى بزخرفته وصنعه من القطيفة والحرير وأسلاك الفضة، وذلك يؤكد بما لا يدع مجالا للشك على فلسفة الجمال والرحمة والعطف على الكائنات الحية في الحضارة الإسلامية."
+               horse_saddle_desc: "تبرهن هذه التحفة الفنية على قيمة الرحمة عند المسلمين، حيث انتج الفن الإسلامي العديد من التحف الفنية لحماية الحيوانات والاهتمام بها، وعلى الرغم من أنها غطاء سرج كان يوضع على ظهر الحصان، إلا أننا نجد أن الفنان قد اعتنى بزخرفته وصنعه من القطيفة والحرير وأسلاك الفضة، وذلك يؤكد بما لا يدع مجالا للشك على فلسفة الجمال والرحمة والعطف على الكائنات الحية في الحضارة الإسلامية.",
+               medicine_manuscript_desc: "كان الغافقي طبيبًا, عاش في الأندلس في القرن 6هـ/12م، والمخطوط علمي تم نسخه في تركيا ومُزين ببعض صور النباتات مع شرح فوائدها الطبية, وكيفية استخدامها في العلاج، ونظرًا لكونه مخطوطًا علميًا فلم يهتم الناسخ بعمل إطار لصفحات المخطوط، وانصب الاهتمام على رسم الأعشاب النباتية وفائدتها الطبية. قاعة 25",
+               tombstone_desc:"يعتبر هذا الشاهد أهم التحف الفنية الباقية في الفنون الإسلامية؛ وذلك لأنه أقدم تحفة مؤرخة في الآثار الإسلامية الباقية، وأقدم وأول نموذج للكتابات في الفن الإسلامي (فيما نعرف حتى الأن). ويتضمن الشاهد ثمانية أسطر بالخط الكوفي البدائي، تحتوي على اسم المتوفى وهو عبد الرحمن بن خير الحجرى أو الحجازي، والدعاء له بالمغفرة وتاريخ وفاته في جمادى الآخرة من عام 31 هـ / يناير أو فبراير 652م.",
                /* timeline 
                1869: "وقد بدأت فكرة إنشاء متحف للفنون والآثار الإسلامية في عصر الخديوي إسماعيل وبالتحديد في سنة 1869م.",
                1880: "عندما قام فرانتز باشا بجمع التحف الأثرية التي ترجع إلى العصر الإسلامي في الإيوان الشرقي لجامع الحاكم بأمر الله",

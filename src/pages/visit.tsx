@@ -3,6 +3,7 @@ import './visit.css'
 //import "./i18n"
 //import {useTranslation} from "react-i18next";
 
+
 /* TICKET INFO ----------------
  *  FOREIGNER:
 Adult: EGP 340\ Student: EGP 170
