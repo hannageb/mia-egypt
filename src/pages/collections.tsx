@@ -157,44 +157,42 @@ export function Collections(){
 
     return(
         <>
-        <div className="search">
-            <div className="container" style={{justifyContent: 'center'}}>
+        <div className="container">
+            <div className="search" style={{justifyContent: 'center'}}>
                 <input type="text" placeholder={t("search")} onChange={handleChange} onKeyDown={handleSearch} value={searchInput} className='search-bar'/>
                 <div className="dropdown">
-                <button className="dropbtn">Filter by Time Period</button>
-                <div className="dropdown-content">
-                    <Form.Group className="time-periods">
-                         <Form.Check label={t("rashidun")} type="checkbox" value="Rashidun"  onChange={handleFilter}/>
-                        <Form.Check label={t("umayyad_abbasid")} type="checkbox" value="Umayyad-Ayyubid"  onChange={handleFilter}/>
-                        <Form.Check label={t("fatimid")} type="checkbox" value="Fatimid"  onChange={handleFilter}/>
-                        <Form.Check label={t("mamluk")} type="checkbox" value="Mamluk"  onChange={handleFilter}/>
-                        <Form.Check label={t("mamlukOttoman_tag")} type="checkbox" value="Mamluk-Ottoman"  onChange={handleFilter}/>
-                        <Form.Check label={t("ottoman")} type="checkbox" value="Ottoman" onChange={handleFilter}/>
-                        <Form.Check label={t("ottomanMuhammadAli_tag")} type="checkbox" value="Ottoman-Muhammad Ali" onChange={handleFilter}/>
-                    </Form.Group>
+                    <button className="dropbtn">Filter by Time Period</button>
+                    <div className="dropdown-content">
+                        <Form.Group className="time-periods">
+                            <Form.Check label={t("rashidun")} type="checkbox" value="Rashidun"  onChange={handleFilter}/>
+                            <Form.Check label={t("umayyad_abbasid")} type="checkbox" value="Umayyad-Ayyubid"  onChange={handleFilter}/>
+                            <Form.Check label={t("fatimid")} type="checkbox" value="Fatimid"  onChange={handleFilter}/>
+                            <Form.Check label={t("mamluk")} type="checkbox" value="Mamluk"  onChange={handleFilter}/>
+                            <Form.Check label={t("mamlukOttoman_tag")} type="checkbox" value="Mamluk-Ottoman"  onChange={handleFilter}/>
+                            <Form.Check label={t("ottoman")} type="checkbox" value="Ottoman" onChange={handleFilter}/>
+                            <Form.Check label={t("ottomanMuhammadAli_tag")} type="checkbox" value="Ottoman-Muhammad Ali" onChange={handleFilter}/>
+                        </Form.Group>
+                    </div>
+                </div>
+                <div className="dropdown">
+                    <button className="dropbtn">Filter by Type</button>
+                    <div className="dropdown-content">
+                        <Form.Group className="types">
+                            <Form.Check label={t("ceramics")} type="checkbox" value="Ceramics"   onChange={handleFilter}/>
+                            <Form.Check label={t("coins")} type="checkbox" value="Coins"  onChange={handleFilter}/>
+                            <Form.Check label={t("glass")} type="checkbox" value="Glass"  onChange={handleFilter}/>
+                            <Form.Check label={t("ivory")} type="checkbox" value="Ivory"  onChange={handleFilter}/>
+                            <Form.Check label={t("jewelry")} type="checkbox" value="Jewelry"  onChange={handleFilter}/>
+                            <Form.Check label={t("manuscripts")} type="checkbox" value="Manuscripts"  onChange={handleFilter}/>
+                            <Form.Check label={t("metals")} type="checkbox" value="Metals"  onChange={handleFilter}/>
+                            <Form.Check label={t("stones")} type="checkbox" value="Stones"  onChange={handleFilter}/>
+                            <Form.Check label={t("textiles" )}type="checkbox" value="Textiles"  onChange={handleFilter}/>
+                            <Form.Check label={t("weapons")} type="checkbox" value="Weapons"  onChange={handleFilter}/>
+                            <Form.Check label={t("wood")} type="checkbox" value="Wood"  onChange={handleFilter}/>
+                        </Form.Group>
+                    </div>
                 </div>
             </div>
-            <div className="dropdown">
-                <button className="dropbtn">Filter by Type</button>
-                <div className="dropdown-content">
-                    <Form.Group className="types">
-                        <Form.Check label={t("ceramics")} type="checkbox" value="Ceramics"   onChange={handleFilter}/>
-                        <Form.Check label={t("coins")} type="checkbox" value="Coins"  onChange={handleFilter}/>
-                        <Form.Check label={t("glass")} type="checkbox" value="Glass"  onChange={handleFilter}/>
-                        <Form.Check label={t("ivory")} type="checkbox" value="Ivory"  onChange={handleFilter}/>
-                        <Form.Check label={t("jewelry")} type="checkbox" value="Jewelry"  onChange={handleFilter}/>
-                        <Form.Check label={t("manuscripts")} type="checkbox" value="Manuscripts"  onChange={handleFilter}/>
-                        <Form.Check label={t("metals")} type="checkbox" value="Metals"  onChange={handleFilter}/>
-                        <Form.Check label={t("stones")} type="checkbox" value="Stones"  onChange={handleFilter}/>
-                        <Form.Check label={t("textiles" )}type="checkbox" value="Textiles"  onChange={handleFilter}/>
-                        <Form.Check label={t("weapons")} type="checkbox" value="Weapons"  onChange={handleFilter}/>
-                        <Form.Check label={t("wood")} type="checkbox" value="Wood"  onChange={handleFilter}/>
-                    </Form.Group>
-                </div>
-                </div>
-            </div>
-        </div>
-        <div className="container">
             <div className="item-grid">
                 {visibleItems.map((item) => (<ItemCard key={item.id} item={item} />))}
             </div>

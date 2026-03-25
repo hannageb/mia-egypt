@@ -5,12 +5,16 @@
 }
 
 .container{
+  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: rgba(233, 224, 212, 0.9);
+}
+.search{
     padding: 10px;
-    margin: 10px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
     gap: 5px;
     background-color: rgba(233, 224, 212, 0.9);
 }
