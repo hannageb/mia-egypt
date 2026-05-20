@@ -19,10 +19,15 @@ footer{
     left: 0;
     bottom: 0;
     right: 0;
-    padding: 6px 3%;
+    padding: 6px 2%;
     background-color: rgb(53, 33, 25);
     color: whitesmoke;
     
+}
+
+li{
+    padding: 0px 20px;
+    list-style-type: none;
 }
 
 .socials img {
@@ -32,6 +37,5 @@ footer{
 }
 
 .socials li{
-    display: inline-block;
-    padding: 0px 20px
+    justify-content: center;
 }
