@@ -13,9 +13,9 @@ import {useTranslation} from "react-i18next";
 import { entireCollection, Item } from './pages/item-card';
 import Carousel from 'react-bootstrap/Carousel';
 import {ItemCard} from './pages/collections';
-import coloring from '../public/workshops/coloring-motifs.jpg';
-import ceramics from '../public/workshops/ceramics-exhibit.jpg';
-import photography from '../public/workshops/photography-course.jpg';
+import coloring from '/workshops/coloring-motifs.jpg';
+import ceramics from '/workshops/ceramics-exhibit.jpg';
+import photography from '/workshops/photography-course.jpg';
 
 
 function App() {

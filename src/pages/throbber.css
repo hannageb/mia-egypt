@@ -1,6 +1,6 @@
 /** from the miaegypt.org website */
 
-body{height: 100%;overflow: hidden;}
+html, body { min-height: 100%; overflow-x: hidden; overflow-y: auto; }
 body.loaded{height: auto !important;overflow: auto;}
 body.loaded .preloader {display:none;}
 
