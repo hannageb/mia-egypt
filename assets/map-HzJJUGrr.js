@@ -1,0 +1,1 @@
+import{j as a,F as s}from"./index-D77B-CWW.js";function e(){return a.jsxs(a.Fragment,{children:[a.jsx("div",{className:"container",children:a.jsx("img",{src:"map.jpg",alt:"map",className:"map"})}),a.jsx(s,{})]})}export{e as default};
